@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-droppable test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body>
+<!--<div class="easyui-drappable" options="accept:'#box'" style="width:500px;height:500px;background-color:black;"></div>-->
+<div id="dd" style="width:500px;height:500px;background-color:black;"></div>
+<div id="box" style="background-color:orange; width:100px; height:100px;">
+    <span id="pox">内容部分</span>
+</div>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    $.fn.droppable.defaults.disabled=true;
+    $(function(){
+        var boxObj = $('#box'), ddObj=$('#dd');
+        boxObj.draggable();
+        ddObj.droppable({
+            disabled:false,
+            accept:'#box', // 检测哪些被拖动的元素可以被接受
+            onDragEnter:function(e, source){ // 拖动一次，就执行一次
+//                console.log(source);
+                console.log('onDragEnter');
+                $(this).css('background','blue');
+            },
+            onDragOver:function(e, source){ // 拖动一次的有移动的过程中，就执行一次
+//                console.log(source);
+                console.log('onDragOver');
+                $(this).css('background','red');
+            },
+            onDragLeave:function(e, source){ // 拖动离开，就执行一次
+//                console.log(source);
+                console.log('onDragLeave');
+                $(this).css('background','yellow');
+            },
+            onDrop:function(e, source){ // 拖动离开，就执行一次
+//                console.log(source);
+                console.log('onDrop');
+                $(this).css('background','black');
+            }
+        });
+
+        ddObj.droppable('disable');
+        ddObj.droppable('enable');
+        console.log(ddObj.droppable('options'));
+    });
+</script>
+</html>

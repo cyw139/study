@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-draggable test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body>
+<!--<div class="easyui-draggable" style="width:100px;height:100px;background-color:orange;"></div>-->
+<div id="box" style="background-color:orange; width:100px; height:100px;">
+    <span id="pox">内容部分</span>
+</div>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    $.fn.draggable.defaults.cursor='text';
+    $.fn.draggable.defaults.revert=true;
+    $(function(){
+        var boxObj = $('#box');
+        boxObj.draggable({
+//            delay:2000,
+//            revert:true, // 默认false；拖动松开后，返回到原始位置；
+//            cursor:'move', // 默认move, 还可设置 text；拖动时光标样式，move为十字、text为竖形I
+//            handle:'#pox', // 默认null，还可设置selector（选择器）；可拖动的句柄；
+//            disabled:true, // 默认false，boolean；是否可拖动；
+//            edge:10, // 默认0；可拖动部分距离边缘的距离
+//            axis:'h', // 默认null；设置可拖动为垂直'v'，水平'h'
+
+//            proxy:'clone', // 默认null, clone 表示克隆一个替代元素拖动；
+//            deltaX:10, // 默认null；拖动时，对应光标的位置X
+//            deltaY:-10, // 默认null；拖动时，对应光标的位置Y
+
+//            proxy:function(source){
+//                var p = $('<div style="width:50px;height:50px;border:1px dashed #ccc;"></div>');
+//                p.html($(source).html()).appendTo('body');
+//                return p;
+//            },
+
+//            onBeforeDrag:function(e){
+//                alert('拖动前触发！');
+////                return false;
+//            },
+//            onStartDrag:function(e){
+////                alert('拖动开始时触发！');
+//                console.log(boxObj.draggable('proxy'));// 代理属性被设置，则返回拖动代理属性
+//            },
+//            onDrag:function(e){
+//                alert('拖动时触发！');
+//            },
+//            onStopDrag:function(e){
+//                alert('拖动结束时触发！');
+//            },
+        });
+
+        boxObj.draggable('disable');
+        boxObj.draggable('enable');
+        console.log(boxObj.draggable('options'));
+    });
+</script>
+</html>

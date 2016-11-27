@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-tabs test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body>
+<!--<div class="easyui-tabs" style="width:500px; height:300px;">-->
+    <!--<div title="tab1">tab1</div>-->
+    <!--<div title="tab2">tab2</div>-->
+    <!--<div title="tab3">tab3</div>-->
+<!--</div>-->
+<div id="box" style="width:500px; height:300px;">
+    <div title="tab1">tab1</div>
+    <div title="tab2" data-options="closable:true">tab2</div>
+    <div title="tab3" id="t3">tab3</div>
+</div>
+<div id="tools">
+    <a class="icon-add" href="javascript:alert('add');" >&nbsp;</a>
+    <a class="icon-cut" href="javascript:alert('cut');" ></a>
+    <a class="icon-help" href="javascript:alert('help');" ></a>
+    <a class="icon-edit" href="javascript:alert('edit');" ></a>
+</div>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var boxObj = $('#box');
+    boxObj.tabs({
+        width:400,
+//        height:100,
+        plain:false, // true, tab条的背景取消
+//        fit:true, // true，全屏覆盖
+//        border:false, // false, 去掉边框
+        tabWidth:200,
+        tabHeight:50,
+        scrollIncrement:200,
+        scrollDuration:100,
+
+//        tools:'#tt',
+        tools:[
+            {
+                iconCls:'icon-add',
+                handler:function(){
+                    alert('add');
+                }
+            },
+            {},
+        ],
+        toolPosition:'left',
+        tabPosition:'top',
+        headerWidth:100, // 必须是tabPosition 为 right 或者 left 时，才有效果
+//        selected:1, // 默认选择的tab位置
+//        showHeader:false, // 是否显示标题头
+
+
+        onUnselect: function(title, index){
+            alert('unselect:'+title+'|'+index);
+        },
+
+        onBeforeClose:function(title, index){
+            alert('before close:'+title+'|'+index);
+        },
+        onClose:function(title, index){
+            alert('close:'+title+'|'+index);
+        },
+        onSelect: function(title, index){
+            alert('select:'+title+'|'+index);
+        },
+        onContextMenu:function(e, title, index){
+            alert('contextMenu:'+e.type +'|'+title+'|'+index );
+        },
+
+    }).css('display','none');
+
+    console.log(boxObj.tabs('tabs'));
+    console.log(boxObj.tabs('options'));
+    $(document).click(function(){
+        boxObj.css('display','block').tabs('resize').tabs('add',{
+            // 继承panel的属性
+            'id':'ttt',
+            'title':'new tab',
+            'content':'new tab content',
+            iconCls:'icon-add',
+            href:'_content.html',
+            width:1,
+            height:1,
+            collapsible:true,
+            closable:true,
+            selected:true,
+
+        }).tabs('select',2).tabs('unselect',0).tabs('hideHeader').tabs('showHeader').tabs('update',{
+            tab:$('#ttt'), // 一定是对象
+            options:{title:'新标签'}
+        }).tabs('disableTab',2).tabs('enableTab',2)
+                .tabs('scrollBy',-100);
+    });
+
+    boxObj.tabs('close',1);
+    console.log(boxObj.tabs('getTab',1)); // 获取索引为1的对象
+    console.log(boxObj.tabs('getTabIndex','#t3')); // 获取标签的索引
+    console.log(boxObj.tabs('getSelected'));  // 获取已选定的对象
+    console.log(boxObj.tabs('exists',5)); // 索引是否存在
+
+
+
+})
+
+</script>
+</html>

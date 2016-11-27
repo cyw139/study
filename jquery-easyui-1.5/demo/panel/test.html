@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-panel test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body>
+<!--<div class="easyui-panel" data-options="width:400, title:'登录', closable:true, ">-->
+    <!--<p>内容</p>-->
+<!--</div>-->
+<div id="box">
+    <p>内容</p>
+</div>
+<div id="tools">
+    <a class="icon-add" href="javascript:alert('add');" ></a>
+    <a class="icon-cut" href="javascript:alert('cut');" ></a>
+    <a class="icon-help" href="javascript:alert('help');" ></a>
+    <a class="icon-edit" href="javascript:alert('edit');" ></a>
+</div>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var boxObj = $('#box');
+    boxObj.panel({
+//        id:'pox',
+        width:400,
+//        height:150,
+//        left:200,
+//        top:200,
+
+        cls:'a',
+        headerCls:'b',
+        bodyCls:'c',
+
+        style:{
+            'height':'300',
+        },
+//        fit:true, // 面板自适应
+//        border:false, // 是否显示边框
+        //dosize:false, // true，面板创建时，重新布局大小和布局；
+
+
+        iconCls:'icon-man',
+//        noheader:true, // 去掉面板标题
+        title:'登录',
+//        content:'内容修改了',
+
+        closable:true,
+        collapsible:true,
+        minimizable:true,
+        maximizable:true,
+
+//        collapsed:true, // 初始化默认折叠
+//        minimized:true,
+//        maximized:true,
+//        closed:true,
+
+        href:'http://test.s.gxqcad.com/jquery-easyui-1.5/demo/panel/content.php',
+        cache:true, // 缓存面板内容，默认true
+        loadingMessage:'加载中...',
+        extractor:function(data){
+            return data.substring(0,3);
+        },
+
+//        tools:'#tools', // selector
+        tools:[{
+            iconCls:'icon-help',
+            handler:function(){
+                alert('help');
+            }
+        },{
+            iconCls:'icon-reload',
+            handler:function(){
+                boxObj.panel('refresh');
+            }
+        }], // array
+
+
+        onResize:function(width,height){
+            alert(width+'|'+height);
+        },
+        onBeforeOpen:function(){
+            alert('before open');
+//            return false;
+        },
+        onOpen:function(){
+            alert('open');
+        },
+        onBeforeLoad:function(){
+            alert('before Load');
+//            return false; // 不进行加载
+        },
+        onBeforeDestroy:function(){
+            alert('before destory');
+            //            return false;
+        },
+        onDestroy:function(){
+            alert('destory');
+        },
+        onLoad:function(){
+            alert('load');
+        },
+
+
+
+        onBeforeClose:function(){
+            alert('before close');
+//            return false;
+        },
+        onClose:function(){
+            alert('close');
+        },
+        onBeforeCollapse:function(){
+            alert('before collapse');
+//            return false;
+        },
+        onCollapse:function(){
+            alert('after collapse');
+        },
+        onBeforeExpand:function(){
+            alert('before expand');
+        },
+        onExpand:function(){
+            alert('after expand');
+        },
+        onMaximize:function(){
+            alert('maximize');
+        },
+        onMinimize:function(){
+            alert('minimize');
+        },
+        onRestore:function(){
+            alert('restore');
+        },
+        onMove:function(left,top){
+            alert(left+'|'+top);
+        },
+
+
+    });
+    console.log(boxObj.panel('options'));
+    console.log(boxObj.panel('panel'));
+    console.log(boxObj.panel('header'));
+    console.log(boxObj.panel('body'));
+    boxObj.panel('setTitle','设置标题');
+//    boxObj.panel('open',false); // true，让 onBeforeOpen 失效
+//    boxObj.panel('close',false); // true，让 onBeforeOpen 失效
+//    boxObj.panel('destroy');
+    boxObj.panel('maximize');
+//    boxObj.panel('minimize');
+    boxObj.panel('restore');
+    boxObj.panel('collapse');
+    boxObj.panel('expand');
+    boxObj.panel('panel').css('position','absolute');
+    $(document).click(function(){
+        boxObj.panel('resize',{
+            width:600,
+            height:300,
+        });
+        boxObj.panel('move',{
+            left:50,
+            top:50,
+        });
+    });
+
+
+
+})
+
+</script>
+</html>

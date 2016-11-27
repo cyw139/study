@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-linkbutton test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body style="margin:100px;">
+<!--<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" >button</a>-->
+<a href="#" id="box" >button</a>
+<a href="#" id="pox" >button</a>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var boxObj = $('#box');
+    boxObj.linkbutton({
+        'iconCls':'icon-search',
+        'id':'pox1',
+//        'disabled':true,
+        toggle:true, //切换选中和不选中
+        selected:true,//默认选中状态
+        group:'sex',
+        text:'man',
+    });
+    var poxObj = $('#pox');
+    poxObj.linkbutton({
+        toggle:true,
+        group:'sex',
+//        plain:true,//显示简洁效果
+        text:'female',
+        iconCls:'icon-add',
+        iconAlign:'right',
+    });
+
+    console.log(boxObj.linkbutton('options'));
+    boxObj.linkbutton('disable');
+    boxObj.linkbutton('enable');
+    poxObj.linkbutton('select');
+    poxObj.linkbutton('unselect');
+})
+
+</script>
+</html>

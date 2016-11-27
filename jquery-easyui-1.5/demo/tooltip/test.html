@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-draggable test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body style="margin:100px;">
+<!--<a href="#" class="easyui-tooltip" title="这是提示内容">Hover me</a>-->
+<a href="#" id="box" >Hover me</a>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+
+    $.fn.tooltip.defaults.position='right';
+    $(function(){
+        var boxObj = $('#box');
+        boxObj.tooltip({
+            content:'<strong style="color:red;">这是提示内容</strong>',
+//            content:function(){
+//                return '<strong style="color:blue;">这是提示内容</strong>';
+//            }
+//            position:'bottom',
+//            trackMouse:true,
+//            deltaX:100,
+//            deltaY:-100,
+//            showEvent:'click',
+//            hideEvent:'dblclick',
+//            showDelay:1000,
+//            hideDelay:1000,
+
+            onShow:function(e){
+//                alert('显示时触发！');
+//                boxObj.tooltip('update','内容变了');
+//                console.log(boxObj.tooltip('tip'));
+//                console.log(boxObj.tooltip('arrow'));
+            },
+//            onHide:function(e){
+////                alert('隐藏时触发！');
+//            },
+//            onUpdate:function(content){
+//                console.log(content);
+//            },
+//            onPosition:function(left,top){
+//                console.log('left:'+left+',top:'+top);
+//            },
+//            onDestroy:function(e){
+//                alert('destroy start')
+//            },
+        });
+
+        console.log(boxObj.tooltip('options'));
+        boxObj.click(function(){
+           $(this).tooltip('destroy');
+        });
+        boxObj.tooltip('show');
+//        boxObj.tooltip('hide');
+        console.log(boxObj.tooltip('tip'));
+    });
+
+</script>
+</html>

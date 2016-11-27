@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-progressbar test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body style="margin:100px;">
+<!--<div class="easyui-progressbar" data-options="width:200, height:30, value:30, text:'{value}#'"></div>-->
+<div id="box"></div>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var boxObj = $('#box');
+    boxObj.progressbar({
+        width:300,
+        height:40,
+        value:30,
+        text:"{value}%",
+        onChange:function(newValue,oldValue){
+            console.log('new:'+newValue+' old:'+oldValue);
+        },
+
+    });
+    console.log(boxObj.progressbar('options'));
+    setInterval(function(){
+        boxObj.progressbar('setValue',boxObj.progressbar('getValue')+5);
+    },500);
+//    setTimeout(function(){
+//        boxObj.progressbar('setValue','70');
+//    },2000);
+    boxObj.progressbar('resize',600);
+
+})
+
+</script>
+</html>
