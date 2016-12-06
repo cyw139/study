@@ -52,11 +52,11 @@ $(function(){
         ],
         toolPosition:'left',
         tabPosition:'top',
-        headerWidth:100, // 必须是tabPosition 为 right 或者 left 时，才有效果
+//        headerWidth:100, // 必须是tabPosition 为 right 或者 left 时，才有效果
 //        selected:1, // 默认选择的tab位置
 //        showHeader:false, // 是否显示标题头
 
-
+/*
         onUnselect: function(title, index){
             alert('unselect:'+title+'|'+index);
         },
@@ -72,6 +72,10 @@ $(function(){
         },
         onContextMenu:function(e, title, index){
             alert('contextMenu:'+e.type +'|'+title+'|'+index );
+        },
+        */
+        onAdd:function(title, index){
+            alert('add:'+title+'|'+index);
         },
 
     }).css('display','none');
@@ -94,9 +98,9 @@ $(function(){
 
         }).tabs('select',2).tabs('unselect',0).tabs('hideHeader').tabs('showHeader').tabs('update',{
             tab:$('#ttt'), // 一定是对象
-            options:{title:'新标签'}
+            options:{title:'修改过的标题^_^'}
         }).tabs('disableTab',2).tabs('enableTab',2)
-                .tabs('scrollBy',-100);
+            .tabs('scrollBy',-100);
     });
 
     boxObj.tabs('close',1);

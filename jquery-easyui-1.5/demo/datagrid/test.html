@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-tabs test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+</head>
+<body>
+<!--html 调用方式-->
+<!--
+<table class="easyui-datagrid" data-options="width:300">
+    <thead>
+        <tr>
+            <th data-options="field:'username'">用户名</th>
+            <th data-options="field:'email'">邮箱</th>
+            <th data-options="field:'regdate'">注册时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sam</td>
+            <td>123423@qq.com</td>
+            <td>2016-12-06</td>
+        </tr>
+        <tr>
+            <td>Lili</td>
+            <td>53453434@qq.com</td>
+            <td>2016-12-05</td>
+        </tr>
+    </tbody>
+</table>
+-->
+
+<table id="box">
+
+</table>
+
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var boxObj = $('#box');
+    boxObj.datagrid({
+//        width:400,
+        title:'用户列表',
+        iconCls:'icon-search',
+        // 为什么是2个中括号？因为可以进行合并单元格；
+        // 标题：列标题和表标题，能区分吗？
+        // 字段集的名称：columns
+        columns:[[
+            {
+                field:'productid',
+                title:'产品ID'
+            },
+            {
+                field:'productname',
+                title:'产品名称'
+            },
+            {
+                field:'unitcost',
+                title:'单位价格'
+            },
+            {
+                field:'status',
+                title:'状态'
+            },
+            {
+                field:'listprice',
+                title:'列表价格'
+            },
+            {
+                field:'attr1',
+                title:'属性1'
+            },
+            {
+                field:'itemid',
+                title:'元素ID'
+            }
+        ]],
+        url:'datagrid_data1.json',
+        pagination: true,
+        pageSize:5,
+        pageList:[5,10,15,20,30],
+        pagePosition:'both', // both, top, bottom
+    });
+})
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
