@@ -5,6 +5,14 @@
     <title>easyui-tabs test</title>
     <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
     <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
 </head>
 <body>
 <!--html 调用方式-->
@@ -35,14 +43,35 @@
 <table id="box">
 
 </table>
+<div id="tb" style="padding:5px;">
+    <div>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="obj.add();">添加</a>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="obj.edit()">修改</a>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'">删除</a>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'" style="display:none" id="save" onclick="obj.save();">保存</a>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-redo'" style="display:none;" id="redo" onclick="obj.redo();">取消编辑</a>
+    </div>
+    <div>
+        产品ID：<input type="text" name="productid" class="textbox" />
+        日期：<input type="text" name="date_from" class="easyui-datebox" data-options="editable:false" />至
+        <input type="text" name="date_to" class="easyui-datebox" data-options="editable:false" />
+        <a class="easyui-linkbutton" href="#" onclick="obj.search();">查询</a>
+    </div>
+</div>
 
 </body>
 <script type="text/javascript" src="../../jquery.min.js"></script>
 <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 <script type="text/javascript">
 $(function(){
-    var boxObj = $('#box');
+    var boxObj = $('#box'), saveObj=$('#save'), redoObj=$('#redo');
+    /**
+     * 依赖的组件包括：Panel（面板）、Resizable（调整大小）、LinkButton（连接按钮）、Pagination（分页）
+     */
     boxObj.datagrid({
+        /**
+         * 一、加载、分页、字段
+         */
 //        width:400,
         title:'用户列表',
         iconCls:'icon-search',
@@ -52,23 +81,79 @@ $(function(){
         columns:[[
             {
                 field:'productid',
-                title:'产品ID'
+                title:'产品ID',
+                //五、表格单元格编辑
+                /**
+                 * type:
+                 * 1、时间：datebox / datetimebox /
+                 * 2、验证：validatatebox /
+                 */
+                //type：text,textbox,numberbox,numberspinner,combobox,combotree,combogrid,,timespinner,datetimespinner,textarea,checkbox,
+                editor:{
+//                    type:'text',
+                    type:'validatebox',
+                    options:{
+                        required:true
+                    }
+                }
             },
             {
                 field:'productname',
-                title:'产品名称'
+                title:'产品名称',
+                editor:{
+                    //                    type:'text',
+                    type:'validatebox',
+                    options:{
+                        required:true,
+                        validType:'email'
+                    }
+                }
             },
             {
                 field:'unitcost',
-                title:'单位价格'
+                title:'单位价格',
+                editor:{
+                    //                    type:'text',
+                    type:'datetimebox',
+                    options:{
+                        required:true
+                    }
+                }
             },
             {
                 field:'status',
-                title:'状态'
+                title:'状态',
+                width:100,
+                //三、只要标题居中，内容不影响
+                halign:'center',
+                //三、是否允许修改字段的宽度？
+                resizable:false,
+                //三、隐藏字段
+                hidden:false,
+                //三、如何格式化单元格？
+                formatter:function(value,row,index){
+                    return value ? '['+value+']': '';
+                },
+                //三、如何设置单元格的样式？
+                styler:function(value,row,index){
+                    return "color:blue;"
+                },
             },
             {
                 field:'listprice',
-                title:'列表价格'
+                title:'列表价格',
+                //二、字段排序
+                sortable:true,
+                //二、自定义排序
+                sorter:function(a,b){
+                    console.log(a+'|'+b);
+                },
+                //三、表格自适应的情况下，字段宽度会失效
+//                width:600,
+                //三、字段属性设置中，如何阻止自适应？
+                fixed:true,
+                //三、标题和内容的对齐方式
+                align:'center',
             },
             {
                 field:'attr1',
@@ -84,6 +169,179 @@ $(function(){
         pageSize:5,
         pageList:[5,10,15,20,30],
         pagePosition:'both', // both, top, bottom
+        /**
+         * 二、排序：初始化排序、列属性排序、自定义排序
+         * 1、如何禁止服务端排序?
+         * 2、如何进行多列排序？
+         * 3、请求参数的方式？
+         * 4、额外的请求参数是什么？
+         */
+        sortName:'unitcost',
+        sortOrder:'DESC',
+        remoteSort:false,
+        multiSort:false,
+//        method:'GET', // 默认POST
+        queryParams:{
+            id:1
+        },
+        /**
+         * 三、
+         * 1、如何显示斑马线效果？
+         * 2、如何在一行显示所有内容？
+         * 3、如何让表格中的字段进行自适应？
+         * 4、如何手动录入数据？
+         * 5、加载提示信息如何修改？
+         * 6、如何显示表格的行号？
+         * 7、如何设置只能选择一行？
+         * 8、如何设置才能不显示表格的字段标题(行头/行尾)？
+         * 9、如何设置滚动条的宽度或者高度呢？
+         * 10、如何设置行的样式？
+         * 11、如何让标题和内容居中/左对齐/右对齐？
+         */
+        striped:true,
+        nowrap:true,
+        fitColumns:true,
+        //url的设置会覆盖这里的设置
+        'data': [
+            {'productid':'pid-1',productname:'pName-1'}
+                ],
+        loadMsg:'努力加载中...',
+        rownumbers:true,
+        singleSelect:false,
+//        showHeader:false,
+        showFooter:true, // 需要在json数据中，设置footer的key属性才能显示出来
+        height:350,
+        scrollbarSize:36,//好像只有纵轴有变化
+        rowStyler:function(index,rows){
+//            console.log(rows);
+            if(index % 2 === 1){
+                // 也可以返回CSS的class名称
+                return "background:orange;";
+            }
+        },
+        /**
+         * 四、工具栏的使用，以及工具栏上的按钮实现查询的功能
+         * 1、如何平均分配字段单元格的宽度？设置字段列属性中的width为相同的
+         * 2、工具栏内容：增删改查
+         */
+        toolbar:'#tb',
+        /**
+         * 五、新增功能
+         */
+        onAfterEdit:function(rowIndex, rowData, changes){
+            //保存成功后再执行
+            obj.editRow=undefined;
+            $(saveObj).hide();
+            $(redoObj).hide();
+            console.log(rowData);
+        },
+        /**
+         * 六、修改删除功能
+         * 1、如何双击修改行中的字段？
+         */
+        onDblClickRow:function(rowIndex, rowData){
+            console.log(obj.editRow,rowIndex);
+            if(obj.editRow != undefined){
+                boxObj.datagrid('endEdit',obj.editRow);
+            }
+            if(obj.editRow == undefined){
+                $(saveObj).show();
+                $(redoObj).show();
+                obj.editRow=rowIndex;
+                boxObj.datagrid('beginEdit',rowIndex);
+            }
+
+        }
+
+    });
+
+    obj={
+        editRow:undefined,
+        // 四、
+        search:function(){
+            boxObj.datagrid('load',{
+                'productid': $.trim($("input[name=productid]").val()),
+                'date_from': $.trim($("input[name=date_from]").val()),
+                'date_to': $.trim($("input[name=date_to]").val())
+            });
+        },
+        //五、
+        add:function(){
+            /*
+            boxObj.datagrid('appendRow',{
+                productid:'pid-01',
+                productname:'pname-01'
+            });
+            */
+            if(this.editRow === undefined){
+                $(saveObj).show();
+                $(redoObj).show();
+                boxObj.datagrid('insertRow',{
+                    index:0,
+                    row:{
+                        productid:'pid-01',
+                        productname:'pname-01'
+                    }
+                });
+                //设置首行为可编辑状态
+                boxObj.datagrid('beginEdit',0);
+                this.editRow = 0;
+            }
+        },
+        save:function(){
+            //首行设置为编辑结束后执行
+            boxObj.datagrid('endEdit',this.editRow);
+        },
+        redo:function(){
+            this.editRow=undefined;
+            $(saveObj).hide();
+            $(redoObj).hide();
+            boxObj.datagrid('rejectChanges');
+        },
+        //六、
+        edit:function(){
+            //获取已经选择的行对象集合，数组
+            var rows = boxObj.datagrid('getSelections');
+            if(rows.length === 1){
+                if(this.editRow == undefined){
+                    var rowIndex = boxObj.datagrid('getRowIndex',rows[0]);
+                    $(saveObj).show();
+                    $(redoObj).show();
+                    this.editRow=rowIndex;
+                    boxObj.datagrid('beginEdit',rowIndex);
+                }else{
+                    boxObj.datagrid('endEdit',this.editRow);
+                }
+            }else{
+                $.messager.alert('警告','修改只能选择一行！','warning');
+            }
+
+        }
+    };
+
+    //五、扩展 datetimebox
+    $.extend($.fn.datagrid.defaults.editors,{
+        datetimebox1:{
+            init:function(container,options){
+                var input = $('<input type="text" />').appendTo(container);
+                options.editable=false;
+                input.datetimebox(options);
+                return input;
+            },
+            getValue:function(target){
+                return $(target).datetimebox('getValue');
+            },
+            setValue:function(target, value){
+                return $(target).datetimebox('setValue',value);
+            },
+            resize:function(target, width){
+                return $(target).datetimebox('resize',width);
+            },
+            destroy:function(target){
+                $(target).datetimebox('destroy');
+            }
+
+        }
     });
 })
 
