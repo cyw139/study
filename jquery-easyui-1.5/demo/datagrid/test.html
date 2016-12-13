@@ -47,7 +47,7 @@
     <div>
         <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="obj.add();">添加</a>
         <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="obj.edit()">修改</a>
-        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'">删除</a>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'" onclick="obj.remove();">删除</a>
         <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'" style="display:none" id="save" onclick="obj.save();">保存</a>
         <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-redo'" style="display:none;" id="redo" onclick="obj.redo();">取消编辑</a>
     </div>
@@ -58,13 +58,19 @@
         <a class="easyui-linkbutton" href="#" onclick="obj.search();">查询</a>
     </div>
 </div>
+<div id="menu" class="easyui-menu" style="width:120px;display:none;">
+    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="obj.add();">添加</a>
+    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="obj.edit()">修改</a>
+    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'" onclick="obj.remove();">删除</a>
+</div>
 
 </body>
 <script type="text/javascript" src="../../jquery.min.js"></script>
 <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 <script type="text/javascript">
 $(function(){
-    var boxObj = $('#box'), saveObj=$('#save'), redoObj=$('#redo');
+    var boxObj = $('#box'), saveObj=$('#save'), redoObj=$('#redo'),menuObj=$('#menu');
+    var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/';
     /**
      * 依赖的组件包括：Panel（面板）、Resizable（调整大小）、LinkButton（连接按钮）、Pagination（分页）
      */
@@ -72,49 +78,21 @@ $(function(){
         /**
          * 一、加载、分页、字段
          */
-//        width:400,
+        width:400,
         title:'用户列表',
         iconCls:'icon-search',
         // 为什么是2个中括号？因为可以进行合并单元格；
         // 标题：列标题和表标题，能区分吗？
         // 字段集的名称：columns
         columns:[[
-            {
-                field:'productid',
-                title:'产品ID',
-                //五、表格单元格编辑
-                /**
-                 * type:
-                 * 1、时间：datebox / datetimebox /
-                 * 2、验证：validatatebox /
-                 */
-                //type：text,textbox,numberbox,numberspinner,combobox,combotree,combogrid,,timespinner,datetimespinner,textarea,checkbox,
-                editor:{
-//                    type:'text',
-                    type:'validatebox',
-                    options:{
-                        required:true
-                    }
-                }
-            },
-            {
-                field:'productname',
-                title:'产品名称',
-                editor:{
-                    //                    type:'text',
-                    type:'validatebox',
-                    options:{
-                        required:true,
-                        validType:'email'
-                    }
-                }
-            },
+
             {
                 field:'unitcost',
                 title:'单位价格',
                 editor:{
                     //                    type:'text',
-                    type:'datetimebox',
+//                    type:'datetimebox',
+                    type:'validatebox',
                     options:{
                         required:true
                     }
@@ -138,6 +116,12 @@ $(function(){
                 styler:function(value,row,index){
                     return "color:blue;"
                 },
+                editor:{
+                    type:'validatebox',
+                    options:{
+                        required:true
+                    }
+                }
             },
             {
                 field:'listprice',
@@ -154,20 +138,39 @@ $(function(){
                 fixed:true,
                 //三、标题和内容的对齐方式
                 align:'center',
+                editor:{
+                    type:'validatebox',
+                    options:{
+                        required:true
+                    }
+                }
             },
             {
                 field:'attr1',
-                title:'属性1'
+                title:'属性1',
+                editor:{
+                    type:'validatebox',
+                    options:{
+                        required:true
+                    }
+                }
             },
             {
                 field:'itemid',
-                title:'元素ID'
+                title:'元素ID',
+                editor:{
+                    type:'validatebox',
+                    options:{
+                        required:true
+                    }
+                }
             }
         ]],
-        url:'datagrid_data1.json',
+//        url:'datagrid_data1.json',
+        url:baseUrl+'select.php',
         pagination: true,
-        pageSize:5,
-        pageList:[5,10,15,20,30],
+        pageSize:1,
+        pageList:[1,2,5,10,15,20,30],
         pagePosition:'both', // both, top, bottom
         /**
          * 二、排序：初始化排序、列属性排序、自定义排序
@@ -178,7 +181,7 @@ $(function(){
          */
         sortName:'unitcost',
         sortOrder:'DESC',
-        remoteSort:false,
+        remoteSort:true,
         multiSort:false,
 //        method:'GET', // 默认POST
         queryParams:{
@@ -197,10 +200,12 @@ $(function(){
          * 9、如何设置滚动条的宽度或者高度呢？
          * 10、如何设置行的样式？
          * 11、如何让标题和内容居中/左对齐/右对齐？
+         * 八、
+         * 1、如何进行冻结
          */
         striped:true,
         nowrap:true,
-        fitColumns:true,
+//        fitColumns:true,
         //url的设置会覆盖这里的设置
         'data': [
             {'productid':'pid-1',productname:'pName-1'}
@@ -226,14 +231,116 @@ $(function(){
          */
         toolbar:'#tb',
         /**
+         * 八、冻结、头部右键、行右键
+         */
+        fitColumns:false,
+        frozenColumns:[[
+            {
+                field:'id',
+                title:'标识',
+                //六、选择框
+                checkbox:true,
+            },
+            {
+                field:'productid',
+                title:'产品ID',
+                //五、表格单元格编辑
+                /**
+                 * type:
+                 * 1、时间：datebox / datetimebox /
+                 * 2、验证：validatatebox /
+                 */
+                //type：text,textbox,numberbox,numberspinner,combobox,combotree,combogrid,,timespinner,datetimespinner,textarea,checkbox,
+                editor:{
+                    //                    type:'text',
+                    type:'validatebox',
+                    options:{
+                        required:true
+                    }
+                }
+            },
+            {
+                field:'productname',
+                title:'产品名称',
+                editor:{
+                    //                    type:'text',
+                    type:'validatebox',
+                    options:{
+                        required:true
+                        //                        validType:'email'
+                    }
+                }
+            }
+        ]],
+        onHeaderContextMenu:function(e, field){
+            alert(field);
+        },
+        onRowContextMenu:function(e, rowIndex, rowData){
+            e.preventDefault();
+            menuObj.menu('show',{left: e.pageX, top: e.pageY});
+        },
+        /**
+         * 九、事件
+         */
+        //点击行事件
+        onClickRow:function(rowIndex, rowData){
+          console.log('row点击：【'+rowIndex+'】行',rowData);
+        },
+        //点击单元格事件
+        onClickCell:function(rowIndex, field, value){
+            console.log('cell点击：【'+rowIndex+'】行，字段名称：【'+field+'】，字段值：【'+value+'】');
+        },
+        onUnselect:function(rowIndex, rowData){
+            console.log('unselect点击：【'+rowIndex+'】行',rowData);
+        },
+        onCheck:function(rowIndex, rowData){
+            console.log('check点击：【'+rowIndex+'】行',rowData);
+        },
+        onCancelEdit:function(rowIndex, rowData){
+            console.log('cancel编辑：【'+rowIndex+'】行',rowData);
+        },
+        onSortColumn:function(sort, order){
+            console.log('sort列：【'+sort+'】',order);
+        },
+        /**
          * 五、新增功能
          */
         onAfterEdit:function(rowIndex, rowData, changes){
             //保存成功后再执行
-            obj.editRow=undefined;
             $(saveObj).hide();
             $(redoObj).hide();
-            console.log(rowData);
+//            console.log(rowData);
+            // 方法一：
+
+            var inserted = boxObj.datagrid('getChanges','inserted');
+            var updated = boxObj.datagrid('getChanges','updated');
+            var url='',info='';
+            if(inserted.length > 0){
+                url ='add.php';
+                info='新增';
+            }
+            if(updated.length > 0){
+                url ='update.php';
+                info='更新';
+            }
+
+            $.ajax({
+                method:'POST',
+                url:baseUrl+ url,
+                data:{
+                    row:rowData
+                },
+                beforeSend:function(){
+                    boxObj.datagrid('loading');
+                },
+                success:function(data){
+                    boxObj.datagrid('loaded').datagrid('load').datagrid('unselectAll');
+                    var msg = data==-1 ? info+'失败': data+'个用户被'+info;
+                    $.messager.show({ title:'提示', msg:msg });
+                    obj.editRow=undefined;
+                }
+            });
+
         },
         /**
          * 六、修改删除功能
@@ -250,7 +357,6 @@ $(function(){
                 obj.editRow=rowIndex;
                 boxObj.datagrid('beginEdit',rowIndex);
             }
-
         }
 
     });
@@ -280,7 +386,12 @@ $(function(){
                     index:0,
                     row:{
                         productid:'pid-01',
-                        productname:'pname-01'
+                        productname:'pname-01',
+                        unitcost:'20',
+                        status:'n',
+                        listprice:'222',
+                        attr1:'little',
+                        itemid:'EST-33'
                     }
                 });
                 //设置首行为可编辑状态
@@ -315,7 +426,49 @@ $(function(){
             }else{
                 $.messager.alert('警告','修改只能选择一行！','warning');
             }
-
+        },
+        // 六、前端UI
+        // 七、后端处理
+        remove:function(){
+            var rows = boxObj.datagrid('getSelections');
+            if(rows.length > 0){
+                $.messager.confirm('确定操作','确定删除所选的行吗？',function(flag){
+                    if(flag){
+                        var pids=[];
+                        for(var i=0; i<rows.length; i++){
+                            pids.push(rows[i].id);
+                        }
+//                        console.log(pids.join(','));
+                        // 七、后端处理
+                        $.ajax({
+                            method:'POST',
+                            url:baseUrl+'delete.php',
+                            data:{
+                                ids:pids.join(',')
+                            },
+                            beforeSend:function(){
+                                boxObj.datagrid('loading');
+                            },
+                            success:function(data){
+                                if(data==-1){
+                                    $.messager.show({
+                                        title:'提示',
+                                        msg:'删除失败'
+                                    });
+                                }else if(data>=1){
+                                    boxObj.datagrid('loaded').datagrid('load').datagrid('unselectAll');
+                                    $.messager.show({
+                                        title:'提示',
+                                        msg:data+'个用户被删除'
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            }else{
+                $.messager.alert('信息','没有选中删除行!','info');
+            }
         }
     };
 
