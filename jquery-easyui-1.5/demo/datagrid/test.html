@@ -56,6 +56,10 @@
         日期：<input type="text" name="date_from" class="easyui-datebox" data-options="editable:false" />至
         <input type="text" name="date_to" class="easyui-datebox" data-options="editable:false" />
         <a class="easyui-linkbutton" href="#" onclick="obj.search();">查询</a>
+        <a class="easyui-linkbutton" href="#" onclick="method.deleteRow();">删除行</a>
+        <a class="easyui-linkbutton" href="#" onclick="method.checkAll();">全部勾选</a>
+        <a class="easyui-linkbutton" href="#" onclick="method.highlightRow();">高亮行</a>
+        <a class="easyui-linkbutton" href="#" onclick="method.mergeCells(0,'productid',2,2);">合并单元格</a>
     </div>
 </div>
 <div id="menu" class="easyui-menu" style="width:120px;display:none;">
@@ -496,7 +500,28 @@ $(function(){
 
         }
     });
-})
+
+    //九、方法
+    method={
+        deleteRow:function(){
+            boxObj.datagrid('deleteRow',0);
+        },
+        checkAll:function(){
+            boxObj.datagrid('checkAll');
+        },
+        highlightRow:function(){
+            boxObj.datagrid('highlightRow',0);
+        },
+        mergeCells:function(rowIndex,fieldName,rowspanNum,colspanNum){
+            boxObj.datagrid('mergeCells',{
+                index:rowIndex,
+                field:fieldName,
+                rowspan:rowspanNum,
+                colspan:colspanNum
+            });
+        }
+    };
+});
 
 </script>
 </html>

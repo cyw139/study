@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-combobox test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<!--html 调用方式-->
+<!--
+<select class="easyui-combobox" style="width:120px;">
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+    <option value="d">d</option>
+</select>
+-->
+<input id="box" name="box"/>
+
+
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var boxObj=$('#box');
+    var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/combobox/';
+    boxObj.combobox({
+        valueField:'id',
+        textField:'productname',
+//        textField:'text',
+        url:baseUrl+'select.php',
+        groupField:'status',
+        groupFormatter:function(group){
+            return '['+group+']';
+        },
+        formatter:function(row){
+            var opts=$(this).combobox('options');
+            return '['+row[opts.textField]+']';
+        },
+//        mode:'remote',
+//        filter:function(q, row){
+//            var opts=$(this).combobox('options');
+//            return row[opts.textField].indexOf(q) >= 0;
+//
+//        },
+
+        /*
+        data:[{
+            "id":1,
+            "text":"Java",
+            "desc":"Write once, run anywhere"
+        },{
+            "id":2,
+            "text":"C#",
+            "desc":"One of the programming languages designed for the Common Language Infrastructure"
+        },{
+            "id":3,
+            "text":"Ruby",
+            "selected":true,
+            "desc":"A dynamic, reflective, general-purpose object-oriented programming language"
+        },{
+            "id":4,
+            "text":"Perl",
+            "desc":"A high-level, general-purpose, interpreted, dynamic programming language"
+        },{
+            "id":5,
+            "text":"Basic",
+            "desc":"A family of general-purpose, high-level programming languages"
+        }],
+        */
+    });
+});
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
