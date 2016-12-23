@@ -25,6 +25,12 @@
 </select>
 -->
 <input id="box" name="box"/>
+<input type="button" value="取消选择" onclick="unSelect();"/>
+<input type="button" value="选择多个选项" onclick="setValues();"/>
+<input type="button" value="选择单个选项" onclick="setValue();"/>
+<input type="button" value="刷新" onclick="reload();"/>
+<input type="button" value="获取请求数据" onclick="getData();"/>
+<input type="button" value="加载本地数据" onclick="loadData();"/>
 
 
 </body>
@@ -53,6 +59,12 @@ $(function() {
 //            return row[opts.textField].indexOf(q) >= 0;
 //
 //        },
+        onSelect:function(rowData){
+            console.log('选择时触发：',rowData);
+        },
+        onUnselect:function(rowData){
+            console.log('取消时触发：',rowData);
+        },
 
         /*
         data:[{
@@ -80,6 +92,53 @@ $(function() {
         */
     });
 });
+    function unSelect(){
+        $('#box').combobox('unselect',1);
+    }
+    function setValues(){
+        $('#box').combobox('setalues',[1,2]); // 只能选择一个？
+    }
+    function setValue(){
+        $('#box').combobox('setValue',2);
+    }
+    function reload(){
+        $('#box').combobox('reload');
+    }
+    function getData(){
+        var data=$('#box').combobox('getData');
+        console.log(data);
+    }
+    function loadData(){
+        var data=[{
+            "id":1,
+            "text":"Java",
+            "productname":"Java",
+            "desc":"Write once, run anywhere"
+        },{
+            "id":2,
+            "text":"C#",
+            "productname":"C#",
+            "desc":"One of the programming languages designed for the Common Language Infrastructure"
+        },{
+            "id":3,
+            "text":"Ruby",
+            "productname":"Ruby",
+            "selected":true,
+            "desc":"A dynamic, reflective, general-purpose object-oriented programming language"
+        },{
+            "id":4,
+            "text":"Perl",
+            "productname":"Perl",
+            "desc":"A high-level, general-purpose, interpreted, dynamic programming language"
+        },{
+            "id":5,
+            "text":"Basic",
+            "productname":"Basic",
+            "desc":"A family of general-purpose, high-level programming languages"
+        }];
+        $('#box').combobox('loadData',data);
+    }
+
 
 </script>
 </html>

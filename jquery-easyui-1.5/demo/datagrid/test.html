@@ -40,9 +40,7 @@
 </table>
 -->
 
-<table id="box">
-
-</table>
+<table id="box"></table>
 <div id="tb" style="padding:5px;">
     <div>
         <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="obj.add();">添加</a>
@@ -62,7 +60,7 @@
         <a class="easyui-linkbutton" href="#" onclick="method.mergeCells(0,'productid',2,2);">合并单元格</a>
     </div>
 </div>
-<div id="menu" class="easyui-menu" style="width:120px;display:none;">
+<div id="menu" class="easyui-menu" style="width:100px;display:none;">
     <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="obj.add();">添加</a>
     <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="obj.edit()">修改</a>
     <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'" onclick="obj.remove();">删除</a>
@@ -81,15 +79,19 @@ $(function(){
     boxObj.datagrid({
         /**
          * 一、加载、分页、字段
+         * 复习总结：数据表格组件（datagrid)能够设置，
+         * 1、加载：宽度（width）、高度（height）、表标题（title）、表标题图标（iconCls）、数据调用（url）/ 数据调用格式（rows/total/footer）、
+         * 2、分页：分页是否加载（pagination）、页面大小（pageSize）、页面列表（pageList =>数组结构）、分页位置（pagePosition => both/top/bottom）
+         * 3、字段：columns => 双括号，目的是为了合并单元格；
+         * => 列标题（title）、列字段（field）、列宽度（width）、
          */
-        width:400,
+        width:600,
         title:'用户列表',
         iconCls:'icon-search',
         // 为什么是2个中括号？因为可以进行合并单元格；
         // 标题：列标题和表标题，能区分吗？
         // 字段集的名称：columns
         columns:[[
-
             {
                 field:'unitcost',
                 title:'单位价格',
@@ -173,7 +175,7 @@ $(function(){
 //        url:'datagrid_data1.json',
         url:baseUrl+'select.php',
         pagination: true,
-        pageSize:1,
+        pageSize:5,
         pageList:[1,2,5,10,15,20,30],
         pagePosition:'both', // both, top, bottom
         /**
@@ -183,9 +185,9 @@ $(function(){
          * 3、请求参数的方式？
          * 4、额外的请求参数是什么？
          */
+        remoteSort:true,
         sortName:'unitcost',
         sortOrder:'DESC',
-        remoteSort:true,
         multiSort:false,
 //        method:'GET', // 默认POST
         queryParams:{

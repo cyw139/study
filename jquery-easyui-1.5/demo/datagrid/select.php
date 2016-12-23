@@ -6,11 +6,16 @@
  * @version       $Id$
  */
 require_once './config.php';
-$rows = (int)$_POST['rows'];
-$page = (int)$_POST['page'];
+$rows = isset($_POST['rows']) ? (int)$_POST['rows'] : 3;
+$page = isset($_POST['page']) ? $_POST['page'] : 1;
 $start = $rows * ($page-1);
-$sql="SELECT * FROM `user` LIMIT {$start},{$rows}";
-$sql_total = "SELECT * FROM `user`";
+$q=isset($_POST['q'])? trim($_POST['q']) : '';
+$where=' where 1=1 ';
+if($q){
+	$where .="AND productname LIKE '%{$q}%'";
+}
+$sql="SELECT * FROM `user` {$where} LIMIT {$start},{$rows}";
+$sql_total = "SELECT * FROM `user` {$where}";
 $result = $db->query($sql);
 $total = $db->query($sql_total);
 $rows = array();

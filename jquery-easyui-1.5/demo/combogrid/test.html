@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-combogrid test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<!--html 调用方式-->
+
+<!--<select class="easyui-combogrid" style="width:120px;" data-options="-->
+    <!--panelWidth:450,-->
+    <!--url:'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/select.php',-->
+    <!--idField:'id',-->
+    <!--textField:'productname',-->
+    <!--columns:[[-->
+        <!--{-->
+            <!--field:'id',-->
+            <!--title:'编号',-->
+            <!--align:'center',-->
+        <!--},-->
+        <!--{-->
+            <!--field:'productname',-->
+            <!--title:'产品名称',-->
+            <!--align:'center',-->
+        <!--},-->
+    <!--]],-->
+<!--"></select>-->
+
+<input id="box" name="box"/>
+<!--<input type="button" value="取消选择" onclick="unSelect();"/>-->
+
+
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var boxObj=$('#box');
+    var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/';
+    boxObj.combogrid({
+        loadMsg:'数据加载中',
+        width:450,
+        panelWidth:650,
+        url:baseUrl+'select.php',
+        idField:'id',
+        textField:'productname',
+        multiple:true,
+        mode:'remote',
+        columns:[[
+            {
+                field:'id',
+                title:'编号',
+                align:'center',
+                checkbox:true, //选择框
+            },
+            {
+                field:'productname',
+                title:'产品名称',
+                align:'center',
+            },
+        ]],
+    });
+});
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
