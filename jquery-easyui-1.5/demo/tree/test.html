@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-tree test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<!--html 调用方式-->
+<!--
+<ul class="easyui-tree">
+    <li>
+        <span>系统管理</span>
+        <ul>
+            <li>
+                <span>主机信息</span>
+                <ul>
+                    <li>版本信息</li>
+                    <li>数据库信息</li>
+                </ul>
+            </li>
+            <li>更新信息</li>
+            <li>程序信息</li>
+        </ul>
+    </li>
+    <li>
+        <span>用户管理</span>
+        <ul>
+            <li>用户新增</li>
+            <li>用户审核</li>
+        </ul>
+    </li>
+</ul>
+-->
+
+<ul id="box"></ul>
+<a class="easyui-linkbutton" href="#" onclick="abc()">点击</a>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    var boxObj=$('#box');
+$(function() {
+
+    var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/tree/';
+    boxObj.tree({
+//        url:'tree_data1.json',
+        method:'POST',
+        animate:true,//是否动画显示效果
+        checkbox:true,//是否显示复选框
+        cascadeCheck:true,//定义是否层叠选中状态
+        onlyLeafCheck:true,//只有叶子节点有复选框
+        lines:true,//是否显示虚线
+        dnd:true,//是否可拖动
+        data:[],//本地加载
+        formatter:function(node){
+            //console.log(node);
+            return node.text;
+        },
+        //第二节、
+        url:baseUrl+'select.php',
+        onLoadSuccess:function(node, data){
+            if(data && data.length > 0){
+                $(data).each(function(i, v){
+                    if(this.state=='closed'){
+                        boxObj.tree('expandAll');
+                    }
+                });
+            }
+        },
+        //第三节：事件
+        onClick:function(node){
+//            console.log(node);
+            var getNode=boxObj.tree('getNode', node.target);
+            var getData=boxObj.tree('getData', node.target);
+            var getParent=boxObj.tree('getParent', node.target);
+            var getChildren=boxObj.tree('getChildren', node.target);
+            var isLeaf=boxObj.tree('isLeaf',node.target);
+//            console.log(getNode,getData,getParent,getChildren);
+            console.log(isLeaf);
+        },
+        onDblClick:function(node){
+            console.log(node);
+        },
+        onBeforeLoad:function(node, param){
+            console.log('onBeforeLoad:start>',node,param,'onBeforeLoad:end');
+        },
+        onLoadError:function(arg){
+            console.log(arg.status);
+        },
+        onBeforeExpand:function(node){
+            console.log('onBeforeExpand:start>',node,'onBeforeExpand:end');
+        },
+        onExpand:function(node){
+            console.log('onExpand:start>',node,'onExpand:end');
+        },
+        //第四节：方法
+        /**
+         * 1、loadData：重新覆盖加载树内容
+         * 2、getNode / getData：获取节点对象
+         * 3、reload: 重新加载树（刷新）
+         * 4、getRoot / getRoots: 获取根节点，第一个根节点 / 所有的根节点
+         * 5、getParent / getChildren: 获取节点的父节点 / 孩子节点
+         * 6、getChecked: 获取选项卡【勾选/未勾选/不确定】对象，state：checked / unchecked / indeterminate
+         * 7、getSelected：获取选择的对象
+         */
+
+    });
+
+});
+function abc(){
+//    var boxObj=$('#box');
+//    $('#box').tree('loadData',[{
+//        text:'重新覆盖加载内容'
+//    }]);
+
+//    $('#box').tree('reload');
+
+    var getRoot=boxObj.tree('getRoot');
+    var getRoots=boxObj.tree('getRoots');
+    var getChecked=boxObj.tree('getChecked','checked');
+    var getChecked_unchecked=boxObj.tree('getChecked','unchecked');
+    var getChecked_indeterminate=boxObj.tree('getChecked','indeterminate');
+    var getSelected=boxObj.tree('getSelected');
+//    console.log(getRoot,getRoots);
+//    console.log(getChecked,getChecked_unchecked,getChecked_indeterminate);
+//    console.log(getSelected);
+
+}
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

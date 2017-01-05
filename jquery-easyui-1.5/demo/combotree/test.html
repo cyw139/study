@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-tree test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<!--html 调用方式-->
+<select id="box1" class="easyui-combotree" data-options="url:'tree_data1.json',width:250" ></select>
+<input id="box" type="text" />
+<a class="easyui-linkbutton" href="#" onclick="abc()" >点击</a>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    var boxObj=$('#box');
+$(function() {
+    //var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/tree/';
+    boxObj.combotree({
+        url:'tree_data1.json',
+        width:200,
+        required:true,
+        editable:true,
+    });
+
+});
+function abc(){
+    /*
+    var t = boxObj.combotree('tree');
+    console.log(t.tree('getSelected'));
+    */
+
+    /*
+    boxObj.combotree('loadData',[
+        {
+            'text':"加载",
+        }
+    ]);
+    */
+
+//    boxObj.combotree('reload'); //刷新
+//    boxObj.combotree('clear'); //清除控件中的值
+//    boxObj.combotree('setValue',1333); //找不到，就赋当前值
+//    boxObj.combotree('setValue',1);
+//    boxObj.combotree('setValues',[11,1]);
+
+    isSelected();
+
+}
+    function isSelected(){
+        var t = boxObj.combotree('tree');
+        var selectedObj = t.tree('getSelected');
+        if(null === selectedObj){
+            boxObj.combotree('clear');
+        }
+    }
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-searchbox test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="easyui-searchbox" style="width:300px" data-options="menu:'#box',prompt:'请输入关键字',searcher:qq"></div>-->
+<div id="searchbox"></div>
+<div id="box">
+    <div data-options="name:'all',iconCls:'icon-ok'">所有频道</div>
+    <div data-options="name:'sport'">体育频道</div>
+</div>
+
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    function qq(value, name){
+        console.log(value+'-'+name);
+    }
+    var searchboxObj=$('#searchbox');
+$(function() {
+//    var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/';
+    searchboxObj.searchbox({
+        menu:'#box',
+        width:300,
+        height:50,
+        prompt:'请输入关键字',
+        value:'固定值',
+        disabled:false,
+        searcher:function(value,name){
+            console.log(value+'-'+name);
+        }
+    });
+
+    var m = searchboxObj.searchbox('menu');
+    m.menu('setIcon',{
+        iconCls:'icon-save',
+        target: m.menu('findItem', '体育频道').target
+    });
+    var textboxObj = searchboxObj.searchbox('textbox');
+//    console.log(textboxObj);
+    var getValue = searchboxObj.searchbox('getValue');
+    console.log(getValue);
+    searchboxObj.searchbox('setValue',123);
+    console.log(searchboxObj.searchbox('getName'));
+
+    searchboxObj.searchbox('selectName','sport'); // 没有效果？？？？
+//    searchboxObj.searchbox('destroy');
+    searchboxObj.searchbox('resize',500);
+    searchboxObj.searchbox('disable');
+    searchboxObj.searchbox('enable');
+//    searchboxObj.searchbox('clear');
+
+    $(document).dblclick(function(){
+        searchboxObj.searchbox('reset');
+    });
+});
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

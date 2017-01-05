@@ -85,7 +85,7 @@ $(function(){
          * 3、字段：columns => 双括号，目的是为了合并单元格；
          * => 列标题（title）、列字段（field）、列宽度（width）、
          */
-        width:600,
+        width:400,
         title:'用户列表',
         iconCls:'icon-search',
         // 为什么是2个中括号？因为可以进行合并单元格；
@@ -95,6 +95,7 @@ $(function(){
             {
                 field:'unitcost',
                 title:'单位价格',
+                sortable:true,
                 editor:{
                     //                    type:'text',
 //                    type:'datetimebox',
@@ -175,19 +176,19 @@ $(function(){
 //        url:'datagrid_data1.json',
         url:baseUrl+'select.php',
         pagination: true,
-        pageSize:5,
+        pageSize:10,
         pageList:[1,2,5,10,15,20,30],
         pagePosition:'both', // both, top, bottom
         /**
          * 二、排序：初始化排序、列属性排序、自定义排序
-         * 1、如何禁止服务端排序?
+         * 1、如何设置服务端排序?
          * 2、如何进行多列排序？
          * 3、请求参数的方式？
          * 4、额外的请求参数是什么？
          */
-        remoteSort:true,
-        sortName:'unitcost',
-        sortOrder:'DESC',
+        remoteSort:false,
+        sortName:'unitcost,listprice',
+        sortOrder:'ASC,DESC',
         multiSort:false,
 //        method:'GET', // 默认POST
         queryParams:{
@@ -210,7 +211,7 @@ $(function(){
          * 1、如何进行冻结
          */
         striped:true,
-        nowrap:true,
+        nowrap:false,
 //        fitColumns:true,
         //url的设置会覆盖这里的设置
         'data': [

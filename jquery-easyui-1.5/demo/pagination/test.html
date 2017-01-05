@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easyui-treegrid test</title>
+    <link type="text/css" href="../../themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="../../themes/icon.css" rel="stylesheet"/>
+    <style>
+        .textbox{
+            height:20px;
+            margin:0;
+            padding:0 2px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<!--html 调用方式-->
+<!--<div class="easyui-pagination" style="border:1px solid #ccc" data-options="total:2000,pageSize:50"></div>-->
+<div id="content" class="easyui-panel" style="height:200px;" data-options="href:'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/select.php?rows=1&page=1'"></div>
+<div id="box" style="border:1px solid #ccc"></div>
+</body>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    var boxObj=$('#box'),contentObj=$('#content');
+$(function() {
+    var baseUrl= 'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/';
+    boxObj.pagination({
+        total:11,
+        pageSize:1,
+        pageNumber:1,
+        pageList:[1,2,5,10,20],
+        buttons:[{iconCls:'icon-add'},'-',{iconCls:'icon-edit'},'-',{iconCls:'icon-remove'}],
+        //        layout:['list','sep','first','prev','sep','manual','sep','next','last','sep','links','sep','refresh'],
+        //        showPageList:false,
+        //        showRefresh:false,
+        //        beforePageText:'第',
+        //        afterPageText:'页共{pages}页',
+        //        displayMsg:'从{from}到{to}，共{total}条',
+        onSelectPage:function(pageNumber, pageSize){
+            boxObj.pagination('loading');
+            contentObj.panel('refresh',baseUrl+'select.php?rows='+pageSize+'&page='+pageNumber);
+            setTimeout(function(){
+                boxObj.pagination('loaded');
+            },1000)
+        },
+        onBeforeRefresh: function(pageNumber, pageSize){
+            alert('刷新前');
+        },
+        onRefresh: function(pageNumber, pageSize){
+            alert('刷新后');
+        },
+        //页面改变大小时触发
+        onChangePageSize: function(pageSize){
+            alert('每页显示的条数改变为：'+pageSize);
+        }
+
+    });
+
+    $(document).click(function(){
+        var pageSize= 2, pageNumber =2 ;
+//        boxObj.pagination('refresh',{
+//            pageSize:pageSize,
+//            pageNumber:pageNumber,
+//        });
+//        contentObj.panel({
+//            href:'http://study.gxqcad.com/jquery-easyui-1.5/demo/datagrid/select.php?rows='+pageSize+'&page='+pageNumber,
+//        })
+
+        boxObj.pagination('select',2);
+    });
+
+});
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
