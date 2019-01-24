@@ -7,7 +7,10 @@
 </head>
 <body>
 <div id="app">
+    <p> <span v-for="n in 10">-{{ n }}</span> </p>
     <p >{{ message }}</p>
+    <p >{{ user1 }}</p>
+    <p >{{ user2 }}</p>
     <!-- 只能响应一次 -->
     <p v-once >{{ message }}</p>
     <!-- 输出真正的html -->
@@ -16,14 +19,26 @@
     <input v-model="message" :disabled="showMessage" >
     <p  v-if="showMessage">v-if：1、不包含DOM;2、更高的切换开销；</p>
     <p  v-show="showMessage">v-show：1、CSS的display属性隐藏，并保留DOM；2、但不支持&lt;template&gt;3、更高的初始渲染开销；</p>
-    <ol>
+    <ol v-if="customers">
         <!--<li v-for="customer in customers">-->
             <!--{{ customer }}-->
             <!--{{ customer.name }}-->
         <!--</li>-->
         <!-- key：管理可复用的元素; -->
         <!-- 不推荐：v-for和v-if一起使用；v-for的优先级高于v-if；-->
-        <customers v-for="c in customers" :customer="c" :key="'list-' + c.id" ></customers>
+        <customers
+                v-for="(c, i) in customers"
+                :customer="c"
+                :key="'list-' + c.id"
+                v-if="c.money > 10"
+                @remove="customers.splice(i, 1)"
+                @addoney="this.addMoney(c)"
+        >
+
+        </customers>
+    </ol>
+    <ol>
+        <user-tpl v-for="u of users" :key="u.id" ></user-tpl>
     </ol>
     <button v-on:click="customers.pop()">弹出客户</button>
     <!-- v-on:click 简写： @click -->
@@ -33,15 +48,26 @@
 </div>
 <script>
     //新组件声明
-    Vue.component(
+    //组件名定义和使用的两种方式：
+    // 1、kebab-case：my-component-name => 使用：<my-component-name>
+    // 2、PascalCase：MyComponentName => 使用：<my-component-name> 或 <MyComponentName> 只在字符串模板中有效
+    Vue.component( //全局注册组件
         'customers',
         {
+            methods: {
+
+            },
+            //父组件，通过props把数据传给子组件
             props: ['customer', 'app'],
             //注意：javascript 表达式（三元表达式、加减表达式）
+            //子组件，通过$emit触发父组件的自定义事件；
+            // vm.$emit( event, arg ) //触发当前实例上的事件
+            // vm.$on( event, fn );//监听event事件后运行 fn；
             template: '<li>' +
-                '{{ customer.money >= 200 ? customer.name : customer.name + "-" }} ' +
+                '{{ customer }} - {{ customer.money >= 200 ? customer.name : customer.name + "-" + $emit("reversedName", [customer.name]) }} ' +
                 '- 余额：{{ customer.money >= 200 ? customer.money + 1 : 0 }} ' +
-                '<button v-on:click="addMoney(customer)">余额+1</button> ' +
+                '<button @click="$emit(\'addMoney\', customer)">余额+1</button> ' +
+                '<button @click="this.$parent.addMoney(customer)">余额+2</button> ' +
                 '</li>' //Mustache 语法（双大括号）
         })
     var data = {
@@ -50,16 +76,33 @@
         customers: [
             {name: 'sam', id: 0, money: 10},
             {name: 'betty', id: 1, money: 200},
-            {name: 'little boy', id: 2, money: 300}
+            {name: 'little boy', id: 2, money: 300},
+            {name: 'sam1', id: 13, money: 111},
+            {name: 'sam2', id: 14, money: 101}
+        ],
+        user1: {name: 'sam chen1', id: 1, money: 1000000 },
+        user2: {name: 'sam chen2', id: 2, money: 2000000 },
+        users:[
+            {name: 'Sam Chen', id: 1, age: 18 },
+            {name: 'Long Zheng', id: 2, age: 38 },
+            {name: 'Qi Wu', id: 3, age: 58 }
         ]
     }
     // Object.freeze(data) //阻止响应式系统追踪对象里的属性
-    var message = 'message';
-    var customers = {name: 'customers'};
+    var message = 'message'
+    var customers = {name: 'customers'}
+    var userComponent = {
+        props: ['user'],
+        template: '<li> {{ user }} </li>'
+    }
     var app = new Vue({
         el: '#app',
         data: function () {
             return data
+        },
+        //局部注册组件
+        components: {
+            'user-tpl': userComponent
         },
         method: {
             addMoney: function(customer){
@@ -69,6 +112,7 @@
         //computed：对应的属性改变时，才会调用，否则返回缓存数据
         computed: {
             reversedName: function(name){
+                console.log(name)
                 return name.split("a").reverse().join("1")
             }
         },
@@ -91,7 +135,7 @@
         mounted: () => console.log(this.message) //this是获取上级haha的message变量
         //5、beforeUpdated 钩子：数据改变更新前
         //6、updated 钩子：数据改变更新后
-        //8、beforeDestroyed 钩子：Vue实例销毁前
+        //7、beforeDestroyed 钩子：Vue实例销毁前
         //8、destroyed 钩子：Vue实例销毁后
     })
     //实例属性
@@ -116,11 +160,20 @@
     //【解决】Vue 能检测数组变动
     Vue.set(app.customers, 0, customer[1]) //只能针对现有的索引进行赋值
     app.$set(app.customers, 1, customer[0])
+    // 参考：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
     app.customers.splice(0, 2, customer[2]) //array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
     app.customers.splice(10)
     console.log(app.customers)
     //【问题】Vue 不能检测对象属性的添加或删除：
-    app.b = 'test b' //不存在的属性，无法实现响应式数据更新，解决：Vue.set(object, key, value)
+    app.b = 'test b' //不存在的属性，无法实现响应式数据更新，
+    // 解决：Vue.set(object, key, value) => 别名：app.$set(object, key, value)
+    Vue.set(app.customers[1], 'nick_name', 'stupid')
+    app.$set(app.customers[0], 'nick_name', 'stupid1')
+    // 解决：赋予多个属性的方法，Object。assign() 和 _.extend()
+    // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+    // 目标：实现响应式属性：
+    Object.assign(app.user1, {level: 5, sex: 'female'}) //level和sex并不是响应式属性，可在控制台上验证
+    app.user2 = Object.assign({}, app.user2, {level: 2, sex: 'male'}) //level 和 sex是响应式属性
 
 </script>
 </body>
