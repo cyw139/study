@@ -16,7 +16,11 @@
     <!-- 输出真正的html -->
     <p v-html="message" v-bind:title="message"></p>
     <!-- v-bind:disabled 简写模式 :disabled -->
+    <!-- v-model：1、应用在input、textarea、select 元素上，创建双向数据绑定； -->
+    <!--          2、忽略表单元素的value、checked、selected属性初始值，而通过使用data声明中的初始值；-->
     <input v-model="message" :disabled="showMessage" >
+    <!-- .lazy在“change”时而非“input”时更新 -->
+    <input v-model.lazy="message" :disabled="showMessage" >
     <p  v-if="showMessage">v-if：1、不包含DOM;2、更高的切换开销；</p>
     <p  v-show="showMessage">v-show：1、CSS的display属性隐藏，并保留DOM；2、但不支持&lt;template&gt;3、更高的初始渲染开销；</p>
     <ol v-if="customers">
@@ -24,7 +28,7 @@
             <!--{{ customer }}-->
             <!--{{ customer.name }}-->
         <!--</li>-->
-        <!-- key：管理可复用的元素; -->
+        <!-- key：管理可复用的元素; 动态绑定，如:customer="c" -->
         <!-- 不推荐：v-for和v-if一起使用；v-for的优先级高于v-if；-->
         <customers
                 v-for="(c, i) in customers"
@@ -32,15 +36,21 @@
                 :key="'list-' + c.id"
                 v-if="c.money > 10"
                 @remove="customers.splice(i, 1)"
-                @addoney="this.addMoney(c)"
+                @addMoneyEvent="addMoney(c)"
         >
-
         </customers>
     </ol>
+
     <ol>
-        <user-tpl v-for="u of users" :key="u.id" ></user-tpl>
+        <user-tpl v-for="u of users" :key="u.id" :user="u">
+
+        </user-tpl>
     </ol>
-    <button v-on:click="customers.pop()">弹出客户</button>
+    <select v-model="userSelected" @change="this.console.log(userSelected)">
+        <!-- 内联对象字面量 -->
+        <option v-for="user of users" :value="user.id" >{{ user.name }}</option>
+    </select>
+    <button @click="customers.pop()">弹出客户</button>
     <!-- v-on:click 简写： @click -->
     <!-- 数组的处理函数（变异方法 > 改变调用的原始数组）：pop、push、shift、unshift、splice、sort、reverse -->
     <!-- 数组的处理函数（非变异方法 > 不改变调用的原始数组，但会返回一个新数组）：filter、concat、slice -->
@@ -51,14 +61,59 @@
     //组件名定义和使用的两种方式：
     // 1、kebab-case：my-component-name => 使用：<my-component-name>
     // 2、PascalCase：MyComponentName => 使用：<my-component-name> 或 <MyComponentName> 只在字符串模板中有效
+    //与new Vue的区别：没有el属性；
     Vue.component( //全局注册组件
         'customers',
         {
+            //特性继承
+            inheritAttrs: false,//组件的根元素不继承
+            data: function(){
+                return {
+                    count: 0
+                }
+            },
             methods: {
 
             },
             //父组件，通过props把数据传给子组件
-            props: ['customer', 'app'],
+            //1、字符串数组形式的props
+            // props: ['customer', 'app'],
+            //2、对象形式的props，prop验证；
+            props: {
+                // customer: Object,
+                //带有默认值的对象，对象或数组默认值必须从一个工厂函数获取
+                customer: {
+                    type: Object,
+                    required: true,
+                    default: function () {
+                        return { name: 'default name', id: 0, money: 500}
+                    },
+                    //自定义验证函数
+                    validator: function (c) {
+                        console.log(c.name)
+                        // 顾客姓名必须匹配下列字符串中的一个
+                        return ['sam'].indexOf(c.name) === -1
+                    }
+                },
+                // age: Number,
+                // 带有默认值
+                age: {
+                    type: Number,
+                    default: 11
+                },
+                // name: String,
+                // 必填的字符串
+                name: {
+                    type: String,
+                    required: false //true的话，如果没有带数据会报错
+                },
+                customers: Array,
+                birthday: Date,
+                countAll: Function,
+                // user: Symbol,
+                //多个可能的类型
+                isShow: [Boolean, String]
+            },
             //注意：javascript 表达式（三元表达式、加减表达式）
             //子组件，通过$emit触发父组件的自定义事件；
             // vm.$emit( event, arg ) //触发当前实例上的事件
@@ -66,13 +121,36 @@
             template: '<li>' +
                 '{{ customer }} - {{ customer.money >= 200 ? customer.name : customer.name + "-" + $emit("reversedName", [customer.name]) }} ' +
                 '- 余额：{{ customer.money >= 200 ? customer.money + 1 : 0 }} ' +
-                '<button @click="$emit(\'addMoney\', customer)">余额+1</button> ' +
-                '<button @click="this.$parent.addMoney(customer)">余额+2</button> ' +
+                '<button @click="$emit(\'addMoneyEvent\', customer)">余额+1</button> ' +
+                    //v-on的事件修饰符：
+                // 1、.once 只执行一次；
+                // 2、.stop 阻止单击事件继续传播；
+                // 3、.prevent 提交事件不在重载页面；
+                    //精确触发，不能参入其他系统修饰符
+                '<button @click.once.exact="$parent.addMoney(customer, $event)">余额+2+once</button> ' +
+                '<button @submit.prevent>余额+3+prevent</button> ' +
+                    //v-on按键修饰符（keyCode）
+                    // 1、.enter 回车；2、.tab tab；3、.delete 删除或退格；4、esc 取消；5、.space 空格；6、.up/.down 向上向下；
+                    // 7、.left/.right 左右；8、设置自定义按键修饰符别名：Vue.config.keyCodes.f1 = 112
+                '<button @keyup.enter="$parent.addMoney(customer, $event)">余额+4+keyUpEnter</button> ' +
+                    //系统修饰键
+                    //.ctrl、.alt、.shift、.meta
+                    // @keyup.alt.67= 'do()' => alt + c
+                    // @click.ctrl= 'do()' => ctrl + click
+
+                    //鼠标按钮修饰符
+                    //.left、.right、.middle
+
+                    //修饰符
+                    //.lazy
+                    //.number
+                    //.trim
                 '</li>' //Mustache 语法（双大括号）
         })
     var data = {
         message: '<b>first app!</b>' + new Date().toLocaleString(),
-        showMessage: true, // null,undefined,true
+        showMessage: false, // null,undefined,true
+        userSelected: 2,
         customers: [
             {name: 'sam', id: 0, money: 10},
             {name: 'betty', id: 1, money: 200},
@@ -83,7 +161,7 @@
         user1: {name: 'sam chen1', id: 1, money: 1000000 },
         user2: {name: 'sam chen2', id: 2, money: 2000000 },
         users:[
-            {name: 'Sam Chen', id: 1, age: 18 },
+            {name: '       Sam Chen ', id: 1, age: 18 },
             {name: 'Long Zheng', id: 2, age: 38 },
             {name: 'Qi Wu', id: 3, age: 58 }
         ]
@@ -93,7 +171,15 @@
     var customers = {name: 'customers'}
     var userComponent = {
         props: ['user'],
-        template: '<li> {{ user }} </li>'
+        template: '<li> ' +
+            // v-model.number 格式化字符串为数值
+            '<input type="number" id="user.id" v-model.number="user.age">{{ user.name }} {{ user }} ' +
+            // v-model.trim 变量获取值，会去除空格值
+            '<input id="user.id" v-model.trim="user.name"> ' +
+            '</li>',
+        components: {
+            //子组件
+        }
     }
     var app = new Vue({
         el: '#app',
@@ -104,9 +190,15 @@
         components: {
             'user-tpl': userComponent
         },
-        method: {
-            addMoney: function(customer){
+        //methods：每次渲染都会进行调用
+        methods: {
+            addMoney: function(customer, event){
                 customer.money += 1
+                if(event) {
+                    event.preventDefault()
+                    console.log(customer)
+                }
+
             }
         },
         //computed：对应的属性改变时，才会调用，否则返回缓存数据
@@ -118,10 +210,6 @@
         },
         //watched：侦听属性，应用于：当需要在数据变化时执行异步或开销较大的操作
         watched: {
-
-        },
-        //methods：每次渲染都会进行调用
-        methods: {
 
         },
         //生命周期钩子
