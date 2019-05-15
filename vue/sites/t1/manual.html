@@ -7,54 +7,54 @@
 </head>
 <body>
 <div id="app">
-    <p> <span v-for="n in 10">-{{ n }}</span> </p>
+    <!--<p> <span v-for="n in 10">-{{ n }}</span> </p>-->
     <p >{{ message }}</p>
-    <p >{{ user1 }}</p>
-    <p >{{ user2 }}</p>
-    <!-- 只能响应一次 -->
-    <p v-once >{{ message }}</p>
-    <!-- 输出真正的html -->
-    <p v-html="message" v-bind:title="message"></p>
-    <!-- v-bind:disabled 简写模式 :disabled -->
-    <!-- v-model：1、应用在input、textarea、select 元素上，创建双向数据绑定； -->
-    <!--          2、忽略表单元素的value、checked、selected属性初始值，而通过使用data声明中的初始值；-->
-    <input v-model="message" :disabled="showMessage" >
-    <!-- .lazy在“change”时而非“input”时更新 -->
-    <input v-model.lazy="message" :disabled="showMessage" >
-    <p  v-if="showMessage">v-if：1、不包含DOM;2、更高的切换开销；</p>
-    <p  v-show="showMessage">v-show：1、CSS的display属性隐藏，并保留DOM；2、但不支持&lt;template&gt;3、更高的初始渲染开销；</p>
-    <ol v-if="customers">
-        <!--<li v-for="customer in customers">-->
-            <!--{{ customer }}-->
-            <!--{{ customer.name }}-->
-        <!--</li>-->
-        <!-- key：管理可复用的元素; 动态绑定，如:customer="c" -->
-        <!-- 不推荐：v-for和v-if一起使用；v-for的优先级高于v-if；-->
-        <customers
-                v-for="(c, i) in customers"
-                :customer="c"
-                :key="'list-' + c.id"
-                v-if="c.money > 10"
-                @remove="customers.splice(i, 1)"
-                @addMoneyEvent="addMoney(c)"
-        >
-        </customers>
-    </ol>
+    <!--<p >{{ user1 }}</p>-->
+    <!--<p >{{ user2 }}</p>-->
+    <!--&lt;!&ndash; 只能响应一次 &ndash;&gt;-->
+    <!--<p v-once >{{ message }}</p>-->
+    <!--&lt;!&ndash; 输出真正的html &ndash;&gt;-->
+    <!--<p v-html="message" v-bind:title="message"></p>-->
+    <!--&lt;!&ndash; v-bind:disabled 简写模式 :disabled &ndash;&gt;-->
+    <!--&lt;!&ndash; v-model：1、应用在input、textarea、select 元素上，创建双向数据绑定； &ndash;&gt;-->
+    <!--&lt;!&ndash;          2、忽略表单元素的value、checked、selected属性初始值，而通过使用data声明中的初始值；&ndash;&gt;-->
+    <!--<input v-model="message" :disabled="showMessage" >-->
+    <!--&lt;!&ndash; .lazy在“change”时而非“input”时更新 &ndash;&gt;-->
+    <!--<input v-model.lazy="message" :disabled="showMessage" >-->
+    <!--<p  v-if="showMessage">v-if：1、不包含DOM;2、更高的切换开销；</p>-->
+    <!--<p  v-show="showMessage">v-show：1、CSS的display属性隐藏，并保留DOM；2、但不支持&lt;template&gt;3、更高的初始渲染开销；</p>-->
+    <!--<ol v-if="customers">-->
+        <!--&lt;!&ndash;<li v-for="customer in customers">&ndash;&gt;-->
+            <!--&lt;!&ndash;{{ customer }}&ndash;&gt;-->
+            <!--&lt;!&ndash;{{ customer.name }}&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--&lt;!&ndash; key：管理可复用的元素; 动态绑定，如:customer="c" &ndash;&gt;-->
+        <!--&lt;!&ndash; 不推荐：v-for和v-if一起使用；v-for的优先级高于v-if；&ndash;&gt;-->
+        <!--<customers-->
+                <!--v-for="(c, i) in customers"-->
+                <!--:customer="c"-->
+                <!--:key="'list-' + c.id"-->
+                <!--v-if="c.money > 10"-->
+                <!--@remove="customers.splice(i, 1)"-->
+                <!--@addMoneyEvent="addMoney(c)"-->
+        <!--&gt;-->
+        <!--</customers>-->
+    <!--</ol>-->
 
-    <ol>
-        <user-tpl v-for="u of users" :key="u.id" :user="u">
+    <!--<ol>-->
+        <!--<user-tpl v-for="u of users" :key="u.id" :user="u">-->
 
-        </user-tpl>
-    </ol>
-    <select v-model="userSelected" @change="this.console.log(userSelected)">
-        <!-- 内联对象字面量 -->
-        <option v-for="user of users" :value="user.id" >{{ user.name }}</option>
-    </select>
-    <button @click="customers.pop()">弹出客户</button>
-    <!-- v-on:click 简写： @click -->
-    <!-- 数组的处理函数（变异方法 > 改变调用的原始数组）：pop、push、shift、unshift、splice、sort、reverse -->
-    <!-- 数组的处理函数（非变异方法 > 不改变调用的原始数组，但会返回一个新数组）：filter、concat、slice -->
-    <button @click="customers.pop()">弹出客户（简写模式）</button>
+        <!--</user-tpl>-->
+    <!--</ol>-->
+    <!--<select v-model="userSelected" @change="this.console.log(userSelected)">-->
+        <!--&lt;!&ndash; 内联对象字面量 &ndash;&gt;-->
+        <!--<option v-for="user of users" :value="user.id" >{{ user.name }}</option>-->
+    <!--</select>-->
+    <!--<button @click="customers.pop()">弹出客户</button>-->
+    <!--&lt;!&ndash; v-on:click 简写： @click &ndash;&gt;-->
+    <!--&lt;!&ndash; 数组的处理函数（变异方法 > 改变调用的原始数组）：pop、push、shift、unshift、splice、sort、reverse &ndash;&gt;-->
+    <!--&lt;!&ndash; 数组的处理函数（非变异方法 > 不改变调用的原始数组，但会返回一个新数组）：filter、concat、slice &ndash;&gt;-->
+    <!--<button @click="customers.pop()">弹出客户（简写模式）</button>-->
 </div>
 <script>
     //新组件声明
