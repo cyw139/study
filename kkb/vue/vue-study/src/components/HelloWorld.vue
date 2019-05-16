@@ -16,15 +16,17 @@
             </li>
         </ul>
         <cart :title="CartTitle" ref="cart" @addCartSuccess="onAddCartSuccess"></cart>
+        <form-test></form-test>
     </div>
 </template>
 
 <script>
     import Cart from './Cart.vue';
+    import FormTest from './FormTest.vue';
     export default {
         name: 'HelloWorld',
         components: {
-            Cart
+            Cart, FormTest
         },
         data: function () {
             return {
