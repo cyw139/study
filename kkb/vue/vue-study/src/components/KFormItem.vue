@@ -38,13 +38,18 @@
             this.$on('validate', this.validate)
         },
         methods: {
-            validate() {
+            validate(trigger) {
                 return new Promise(resolve => {
                     // console.log('执行校验')
+                    // 【lesson1 - 作业1】过滤触发事件的校验规则
+                    const rules = this.form.rules[this.prop].filter(item => item.trigger === trigger)
+                    if (rules.length === 0) {
+                        return
+                    }
                     // 需要插件：async-validator
                     // 校验规则指定
                     // es6语法：计算属性 [this.prop]
-                    const descriptor = { [this.prop]: this.form.rules[this.prop] }
+                    const descriptor = { [this.prop]: rules }
                     // console.log(descriptor)
                     // 创建校验器
                     const validator = new Validator(descriptor)

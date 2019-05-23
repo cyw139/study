@@ -53,8 +53,14 @@
             return {
                 model: { username: 'tom', password: '' },
                 rules: {
-                    username: [{required: true, message: '请输入用户名'}],
-                    password: [{required: true, message: '请输入密码'}],
+                    username: [{required: true, message: '请输入用户名', trigger: 'blur'}],
+                    password: [
+                        {required: true, message: '请输入密码1', trigger: 'change'},
+                        // 【lesson1 - 作业2】自定义校验
+                        {validator: (rule, value, cb) => {
+                            cb(new Error())
+                            }, message: '请输入密码2', trigger: 'blur'}
+                    ],
                 }
             }
         },

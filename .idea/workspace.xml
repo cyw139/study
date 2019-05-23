@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="学习笔记：2019-05-15-002">
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" afterDir="false" />
+    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="学习笔记：2019-05-16 添加router：vue add router">
+      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue" afterDir="false" />
     </list>
     <ignored path="study.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,33 +81,33 @@
         <counts>
           <entry key="gitignore" value="64" />
           <entry key="html" value="1" />
-          <entry key="js" value="42" />
-          <entry key="txt" value="17" />
-          <entry key="vue" value="5326" />
+          <entry key="js" value="974" />
+          <entry key="txt" value="57" />
+          <entry key="vue" value="6325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="42" />
-          <entry key="PLAIN_TEXT" value="81" />
-          <entry key="Vue.js" value="5326" />
+          <entry key="JavaScript" value="974" />
+          <entry key="PLAIN_TEXT" value="121" />
+          <entry key="Vue.js" value="6325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="js" value="2" />
+          <entry key="js" value="5" />
           <entry key="json" value="1" />
-          <entry key="vue" value="17" />
+          <entry key="vue" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="2" />
+          <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Vue.js" value="17" />
+          <entry key="Vue.js" value="32" />
         </counts>
       </usages-collector>
     </session>
@@ -111,62 +116,59 @@
     <favorites_list name="study" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.29081634">
+    <splitter split-orientation="vertical" split-proportion="0.40714285">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#682#712#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="90">
+                  <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="62" column="47" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="47" />
-                  <folding>
-                    <element signature="e#1594#1627#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="75">
+                  <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="63" column="14" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="63" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="70">
-                  <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/plugins/element.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/main.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="11" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="84">
+                  <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -174,43 +176,29 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.5">
-          <split-first>
-            <leaf>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="228">
-                      <caret line="86" column="35" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="88">
-                      <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="113">
-                      <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/router.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="64" column="3" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -219,6 +207,7 @@
       <list>
         <option value="HTML File" />
         <option value="XSLT Stylesheet" />
+        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -246,12 +235,21 @@
         <option value="$PROJECT_DIR$/vue/sites/t1/ttt.vue" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/main.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue" />
-        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue" />
-        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue" />
-        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/config/vue.config.js.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/config/vue.config.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/router.js" />
       </list>
     </option>
   </component>
@@ -325,16 +323,7 @@
               <item name="vue" type="462c0819:PsiDirectoryNode" />
               <item name="vue-study" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
@@ -375,6 +364,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kkb/vue/vue-study" />
       <recent name="$PROJECT_DIR$/vue/test" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -422,7 +412,7 @@
       <workItem from="1552022439568" duration="2472000" />
       <workItem from="1555044921907" duration="396000" />
       <workItem from="1555759223886" duration="107000" />
-      <workItem from="1557540757779" duration="42108000" />
+      <workItem from="1557540757779" duration="63641000" />
     </task>
     <task id="LOCAL-00001" summary="新增学习">
       <created>1480282676658</created>
@@ -508,17 +498,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557884650906</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="学习笔记：2019-05-16 添加router：vue add router">
+      <created>1557970333090</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1557970333090</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91716000" />
+    <option name="totallyTimeSpent" value="113249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="627" y="0" width="1053" height="1050" extended-state="6" />
+    <frame x="597" y="0" width="1083" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25024727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24879923" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -529,7 +526,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943925" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.1622449" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.25816327" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -570,7 +567,8 @@
     <MESSAGE value="学习笔记：2019-01-23" />
     <MESSAGE value="学习笔记：2019-05-15" />
     <MESSAGE value="学习笔记：2019-05-15-002" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习笔记：2019-05-15-002" />
+    <MESSAGE value="学习笔记：2019-05-16 添加router：vue add router" />
+    <option name="LAST_COMMIT_MESSAGE" value="学习笔记：2019-05-16 添加router：vue add router" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vue/package.json" />
@@ -632,33 +630,6 @@
     <entry file="file://$PROJECT_DIR$/jquery-easyui-1.5/demo/datagrid/datagrid_data1.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/plugins/element.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="86" column="35" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -666,44 +637,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/plugins/element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
-            <element signature="e#682#712#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="138">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="47" />
+        <state relative-caret-position="-234">
+          <caret line="49" column="29" lean-forward="true" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
           <folding>
             <element signature="e#1594#1627#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state relative-caret-position="960">
+          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="63" column="14" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="64" column="3" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
