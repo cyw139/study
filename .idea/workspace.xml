@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="学习笔记：2019-05-16 添加router：vue add router">
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js" afterDir="false" />
+    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="学习笔记：2019-05-23 添加router：vue add vuex">
+      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/CartOfVuex.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/kstore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/FormTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" afterDir="false" />
     </list>
     <ignored path="study.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,42 +69,43 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="64" />
           <entry key="html" value="1" />
-          <entry key="js" value="974" />
-          <entry key="txt" value="57" />
-          <entry key="vue" value="6325" />
+          <entry key="js" value="1983" />
+          <entry key="txt" value="71" />
+          <entry key="vue" value="7295" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="974" />
-          <entry key="PLAIN_TEXT" value="121" />
-          <entry key="Vue.js" value="6325" />
+          <entry key="JavaScript" value="1983" />
+          <entry key="PLAIN_TEXT" value="135" />
+          <entry key="Vue.js" value="7295" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="js" value="5" />
+          <entry key="js" value="10" />
           <entry key="json" value="1" />
-          <entry key="vue" value="32" />
+          <entry key="vue" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="5" />
+          <entry key="JavaScript" value="10" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Vue.js" value="32" />
+          <entry key="Vue.js" value="37" />
         </counts>
       </usages-collector>
     </session>
@@ -116,59 +114,17 @@
     <favorites_list name="study" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.40714285">
+    <splitter split-orientation="vertical" split-proportion="0.53163266">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="63" column="14" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="63" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
-                  <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+                <state relative-caret-position="147">
+                  <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#471#512#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -176,12 +132,24 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/router.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="64" column="3" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+                <state relative-caret-position="420">
+                  <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -190,10 +158,13 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js">
+            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+                <state relative-caret-position="105">
+                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -207,8 +178,8 @@
       <list>
         <option value="HTML File" />
         <option value="XSLT Stylesheet" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -218,6 +189,9 @@
       <find>app</find>
       <find>custom</find>
       <find>setTimeout(</find>
+      <find>inject</find>
+      <find>inject: ['</find>
+      <find>form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,13 +217,17 @@
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/config/vue.config.js" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/KInput.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js" />
-        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" />
-        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue" />
-        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/kstore.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/kstore.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/store.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue" />
         <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/router.js" />
+        <option value="$PROJECT_DIR$/kkb/vue/vue-study/src/components/CartOfVuex.vue" />
       </list>
     </option>
   </component>
@@ -264,6 +242,782 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@akryum/winattr/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@apollographql/apollo-tools/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@apollographql/graphql-playground-html/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@mrmlnc/readdir-enhanced/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@nodelib/fs.stat/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/aspromise/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/base64/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/codegen/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/eventemitter/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/fetch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/float/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/inquire/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/pool/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@protobufjs/utf8/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/accepts/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/connect/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/cors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/events/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/express-serve-static-core/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/express/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/long/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/mime/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/node/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/ws/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@types/zen-observable/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@vue/cli-shared-utils/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@vue/cli-ui-addon-webpack/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@vue/cli-ui-addon-widgets/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@vue/cli-ui/node_modules/clone/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@vue/cli-ui/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/@vue/cli/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/abbrev/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/accepts/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/aggregate-error/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ajv/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ansi-align/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ansi-escapes/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ansi-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ansi-styles/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/anymatch/node_modules/normalize-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/anymatch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-cache-control/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-cache-inmemory/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-client/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-datasource/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-engine-reporting-protobuf/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-engine-reporting/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-env/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-graphql/node_modules/apollo-env/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-graphql/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-context/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-dedup/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-http-common/node_modules/ts-invariant/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-http-common/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-persisted-queries/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-state/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link-ws/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link/node_modules/ts-invariant/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-link/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-server-caching/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-server-core/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-server-env/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-server-errors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-server-express/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-server-plugin-base/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-tracing/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-upload-client/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/apollo-utilities/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/arg/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/argparse/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/arr-diff/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/arr-flatten/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/arr-union/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-filter/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-flatten/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-map/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-reduce/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-union/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-uniq/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/array-unique/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/arrify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/asn1/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/assert-plus/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/assign-symbols/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ast-types/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/async-each/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/async-limiter/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/async-retry/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/async/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/asynckit/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/atob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/aws-sign2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/aws4/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/backo2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/base/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/base/node_modules/is-accessor-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/base/node_modules/is-data-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/base/node_modules/is-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/base/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/base64-js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/bcrypt-pbkdf/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/binary-extensions/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/bl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/body-parser/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/body-parser/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/boxen/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/brace-expansion/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/braces/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/braces/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/buffer-alloc-unsafe/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/buffer-alloc/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/buffer-crc32/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/buffer-fill/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/buffer-from/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/builtins/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/busboy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cache-base/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/call-me-maybe/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/camelcase/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/capture-stack-trace/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/caseless/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/caw/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/chalk/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/chardet/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/chokidar/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ci-info/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/class-utils/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/class-utils/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/clean-stack/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cli-boxes/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cli-cursor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cli-spinners/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cli-width/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/clipboard/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/clone/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cmd-shim/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/collection-visit/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/color-convert/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/color-name/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/combined-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/component-emitter/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/concat-map/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/config-chain/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/configstore/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/content-disposition/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cookie-signature/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cookie/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/copy-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/core-js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/create-error-class/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cross-spawn-async/node_modules/lru-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cross-spawn-async/node_modules/yallist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cross-spawn-async/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cross-spawn/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/cross-spawn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/crypto-random-string/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/csv-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/dashdash/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/debug/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decode-uri-component/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-tar/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-tarbz2/node_modules/file-type/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-tarbz2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-targz/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-unzip/node_modules/file-type/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-unzip/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-unzip/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress-unzip/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/decompress/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/deep-extend/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/deepmerge/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/defaults/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/define-properties/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/define-property/node_modules/is-accessor-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/define-property/node_modules/is-data-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/define-property/node_modules/is-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/delayed-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/delegate/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/depd/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/deprecated-decorator/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/destroy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/dicer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/diff/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/dir-glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/dot-prop/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/download-git-repo/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/download/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/download/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/download/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/duplexer3/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/easy-stack/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ecc-jsbn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ee-first/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ejs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/encodeurl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/end-of-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/entities/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/envinfo/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/es-abstract/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/es-to-primitive/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/escape-html/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/escape-string-regexp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/esm/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/esprima/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/etag/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/event-pubsub/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/eventemitter3/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/exec-sh/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/execa/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/expand-brackets/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/expand-brackets/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/expand-brackets/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/expand-brackets/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/expand-tilde/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express-history-api-fallback/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/express/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extend-shallow/node_modules/is-extendable/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extend/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/external-editor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extglob/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extglob/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extglob/node_modules/is-accessor-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extglob/node_modules/is-data-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extglob/node_modules/is-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extglob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extract-files/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/extsprintf/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fast-deep-equal/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fast-glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fast-json-stable-stringify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fd-slicer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/figures/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/file-type/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/filename-reserved-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/filenamify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fill-range/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fill-range/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/finalhandler/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/finalhandler/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/finalhandler/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fkill/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/for-in/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/forever-agent/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/form-data/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/forwarded/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fragment-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fresh/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/from2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fs-capacitor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fs-constants/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fs-exists-sync/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fs-extra/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fs.realpath/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/abbrev/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/ansi-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/aproba/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/are-we-there-yet/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/brace-expansion/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/chownr/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/code-point-at/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/concat-map/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/console-control-strings/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/deep-extend/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/delegates/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/detect-libc/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/fs-minipass/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/fs.realpath/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/gauge/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/has-unicode/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/ignore-walk/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/inflight/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/ini/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/is-fullwidth-code-point/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/minipass/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/minizlib/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/needle/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/node-pre-gyp/lib/util/nw-pre-gyp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/node-pre-gyp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/nopt/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/npm-bundled/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/npm-packlist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/npmlog/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/number-is-nan/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/object-assign/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/once/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/os-homedir/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/os-tmpdir/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/osenv/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/rc/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/rc/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/rimraf/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/safer-buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/sax/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/set-blocking/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/signal-exit/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/string-width/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/strip-json-comments/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/tar/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/wide-align/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/node_modules/yallist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fsevents/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/fswin/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/function-bind/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/generate-function/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/generate-object-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/get-proxy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/get-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/getpass/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/git-clone/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/git-config-path/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/git-config-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/glob-parent/node_modules/is-glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/glob-parent/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/glob-to-regexp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/global-dirs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/globby/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/globby/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/good-listener/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/got/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/got/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graceful-fs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graceful-readlink/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-anywhere/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-extensions/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-subscriptions/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-tag/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-tools/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-type-json/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql-upload/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/graphql/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/growly/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/har-schema/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/har-validator/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-flag/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-symbol-support-x/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-symbols/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-to-string-tag-x/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-values/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has-values/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/has/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/hash.js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/hoek/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/homedir-polyfill/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/http-signature/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ieee754/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ignore-by-default/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ignore/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/immutable-tuple/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/import-global/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/import-lazy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/imurmurhash/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/indent-string/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/inflight/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ini/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/inquirer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/into-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ipaddr.js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-accessor-descriptor/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-accessor-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-binary-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-callable/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-ci/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-data-descriptor/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-data-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-date-object/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-descriptor/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-extendable/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-extglob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-fullwidth-code-point/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-glob/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-installed-globally/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-natural-number/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-npm/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-number/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-number/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-obj/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-object/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-path-inside/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-plain-object/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-promise/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-redirect/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-retry-allowed/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-symbol/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-typedarray/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-windows/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/is-wsl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isbinaryfile/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isemail/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isexe/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isobject/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isstream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/isurl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/iterall/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/javascript-stringify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/joi/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/js-message/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/js-queue/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/js-yaml/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/jsbn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/json-schema-traverse/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/json-schema/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/json-stringify-safe/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/jsonfile/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/jsonify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/jsprim/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/latest-version/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/launch-editor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lodash.clonedeep/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lodash.merge/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lodash.sortby/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/log-symbols/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/long/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lowdb/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lowercase-keys/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/lru-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/make-dir/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/make-error/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/map-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/map-visit/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/media-typer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/merge-descriptors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/merge/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/merge2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/methods/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/micromatch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mimic-fn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/minimalistic-assert/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mixin-deep/node_modules/is-extendable/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mixin-deep/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mkdirp/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/mute-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nan/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nan/tools/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nanoid/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nanomatch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ndjson/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/neat-csv/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/neat-csv/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/negotiator/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nice-try/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/node-fetch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/node-ipc/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/node-notifier/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/node-notifier/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nodemon/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nodemon/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nodemon/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nodemon/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/nopt/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/normalize-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/npm-conf/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/npm-run-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/oauth-sign/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-assign/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-copy/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-copy/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-copy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-keys/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object-visit/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object.getownpropertydescriptors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/object.pick/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/on-finished/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/once/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/onetime/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/opn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/optimism/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ora/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/os-tmpdir/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/p-finally/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/package-json/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/package-json/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/parse-git-config/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/parse-passwd/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/parseurl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pascalcase/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-dirname/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-is-inside/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-key/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-parse/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-to-regexp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/path-type/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pend/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/performance-now/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pid-from-port/node_modules/cross-spawn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pid-from-port/node_modules/execa/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pid-from-port/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pid-from-port/node_modules/lru-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pid-from-port/node_modules/yallist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pid-from-port/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pinkie-promise/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pinkie/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/portfinder/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/portfinder/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/posix-character-classes/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/prepend-http/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/prismjs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/private/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/process-exists/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/proto-list/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/protobufjs/cli/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/protobufjs/node_modules/@types/node/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/protobufjs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/proxy-addr/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ps-list/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pseudomap/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/psl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pstree.remy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/pump/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rc/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/readdirp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/recast/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/recast/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/regex-not/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/registry-auth-token/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/registry-url/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/remove-trailing-separator/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/repeat-element/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/repeat-string/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/request-promise-core/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/request-promise-native/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/request/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve-url/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/baz/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/browser_field/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/dot_main/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/dot_slash_main/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/incorrect_main/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/invalid_main/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/multirepo/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/multirepo/packages/package-a/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/resolve/test/resolver/multirepo/packages/package-b/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/restore-cursor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ret/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/retry/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rimraf/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rss-parser/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/run-async/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/ajax/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/internal-compatibility/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/operators/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/src/ajax/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/src/fetch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/src/internal-compatibility/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/src/operators/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/src/testing/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/src/webSocket/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/testing/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/rxjs/webSocket/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/safe-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/safer-buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/sax/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/sec/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/seek-bzip/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/seek-bzip/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/select/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/semver-diff/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/semver-diff/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/send/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/send/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/send/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/send/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/send/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/set-value/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/set-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/sha.js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/shebang-command/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/shebang-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/shell-quote/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/shellwords/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/shortid/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/signal-exit/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/slash/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-node/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-node/node_modules/is-accessor-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-node/node_modules/is-data-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-node/node_modules/is-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-node/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-util/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon-util/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/snapdragon/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/source-map-resolve/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/source-map-support/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/source-map-support/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/source-map-url/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/split-string/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/split2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/sprintf-js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/sshpk/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/static-extend/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/static-extend/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/stealthy-require/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/steno/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/streamsearch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/string-width/node_modules/ansi-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/string-width/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/string-width/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/string.prototype.padstart/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/strip-dirs/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/strip-eof/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/strip-json-comments/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/strip-outer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/subscriptions-transport-ws/node_modules/ws/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/subscriptions-transport-ws/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/symbol-observable/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tar-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/taskkill/node_modules/execa/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/taskkill/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tasklist/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tasklist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/term-size/node_modules/cross-spawn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/term-size/node_modules/execa/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/term-size/node_modules/get-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/term-size/node_modules/lru-cache/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/term-size/node_modules/yallist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/term-size/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/through/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/through2/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/timed-out/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tiny-emitter/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tmp/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/to-buffer/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/to-object-path/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/to-object-path/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/to-regex-range/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/to-regex/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/toidentifier/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/topo/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/touch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tough-cookie/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tough-cookie/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/trim-repeated/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ts-invariant/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ts-node/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tslib/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tunnel-agent/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/tweetnacl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/type-is/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unbzip2-stream/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/undefsafe/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/undefsafe/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/union-value/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/union-value/node_modules/set-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/union-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unique-string/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/universalify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unpipe/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unset-value/node_modules/has-value/node_modules/isobject/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unset-value/node_modules/has-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unset-value/node_modules/has-values/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unset-value/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/unzip-response/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/upath/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/update-notifier/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/uri-js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/urix/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/url-parse-lax/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/url-to-options/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/use/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/util.promisify/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/utils-merge/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/uuid/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/validate-npm-package-name/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/vary/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/verror/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/vue-cli-plugin-apollo/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/watch/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/wcwidth/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/which/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/widest-line/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/write-file-atomic/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/ws/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/xdg-basedir/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/xml2js/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/xmlbuilder/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/xtend/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/yallist/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/yaml-front-matter/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/yaml-front-matter/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/yauzl/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/yn/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/zen-observable-ts/package.json" />
+      <path value="$PROJECT_DIR$/kkb/vue/node_modules/zen-observable/package.json" />
       <path value="$PROJECT_DIR$/kkb/vue/vue-study/package.json" />
       <path value="$PROJECT_DIR$/vue/node_modules/vue/package.json" />
     </packageJsonPaths>
@@ -282,7 +1036,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,69 +1043,11 @@
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="t1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,13 +1058,16 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kkb/vue/vue-study/src/components" />
+      <recent name="$PROJECT_DIR$/jquery-easyui-1.5/demo/datagrid" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kkb/vue/vue-study/src/components" />
+      <recent name="$PROJECT_DIR$/kkb/vue/vue-study/src/views" />
+      <recent name="$PROJECT_DIR$/kkb/vue/vue-study/src" />
       <recent name="$PROJECT_DIR$/kkb/vue/vue-study" />
       <recent name="$PROJECT_DIR$/vue/test" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/jquery-easyui-1.5/demo/datagrid" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -412,7 +1110,8 @@
       <workItem from="1552022439568" duration="2472000" />
       <workItem from="1555044921907" duration="396000" />
       <workItem from="1555759223886" duration="107000" />
-      <workItem from="1557540757779" duration="63641000" />
+      <workItem from="1557540757779" duration="81778000" />
+      <workItem from="1558685232250" duration="4452000" />
     </task>
     <task id="LOCAL-00001" summary="新增学习">
       <created>1480282676658</created>
@@ -505,17 +1204,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557970333090</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="学习笔记：2019-05-23 添加router：vue add vuex">
+      <created>1558578013488</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558578013488</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113249000" />
+    <option name="totallyTimeSpent" value="135838000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="597" y="0" width="1083" height="1050" extended-state="6" />
+    <frame x="881" y="0" width="799" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24879923" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.31704095" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -568,7 +1274,8 @@
     <MESSAGE value="学习笔记：2019-05-15" />
     <MESSAGE value="学习笔记：2019-05-15-002" />
     <MESSAGE value="学习笔记：2019-05-16 添加router：vue add router" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习笔记：2019-05-16 添加router：vue add router" />
+    <MESSAGE value="学习笔记：2019-05-23 添加router：vue add vuex" />
+    <option name="LAST_COMMIT_MESSAGE" value="学习笔记：2019-05-23 添加router：vue add vuex" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vue/package.json" />
@@ -593,13 +1300,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/sites/t1/ttt.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/sites/t1/ttt.vue" />
     <entry file="file://$PROJECT_DIR$/vue/test/ttt.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -611,12 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="392" column="28" selection-start-line="392" selection-start-column="28" selection-end-line="392" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,9 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,20 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -678,6 +1356,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/About.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/kstore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -685,72 +1373,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/main.js">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/vue.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="63" column="14" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="63" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="64" column="3" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+        <state relative-caret-position="105">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Detail.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="420">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/CartOfVuex.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="e#471#512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

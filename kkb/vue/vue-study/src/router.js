@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import List from './views/List.vue'
 import Detail from './views/Detail.vue'
+import CartOfVuex from './components/CartOfVuex.vue'
+import store from './store'
 
 Vue.use(Router)
 
@@ -21,6 +23,11 @@ const router = new Router({
                     path: '/detail/:id', // 路由传参
                     component: Detail,
                     props: true // 用属性的方式传参。true参数调用 id，false参数调用 $route.params.id
+                },
+                {
+                    path: '/cart', // 路由传参
+                    component: CartOfVuex,
+                    props: true // 用属性的方式传参。true参数调用 id，false参数调用 $route.params.id
                 }
             ]
         },
@@ -36,7 +43,9 @@ const router = new Router({
             beforeEnter(to,from,next) {
                 // 判断是否登录
                 // console.log(to.path)
-                if (!window.isLogin) {
+                console.log(store)
+                // if (!store.state.isLogin) { // !window.isLogin
+                if (!store.state.defaultStore.isLogin) { // !window.isLogin
                     next('/login?redirect=' + to.path)
                 } else {
                     next()
@@ -66,7 +75,7 @@ const router = new Router({
 // router.beforeEach((to,from,next) => {
 //     // 判断是否登录
 //     // console.log(to.path)
-//     if (to.path === '/about' && !window.isLogin) {
+//     if (to.path === '/about' && !store.state.isLogin) { // !window.isLogin
 //         next('/login?redirect=' + to.path)
 //     } else {
 //         next()
