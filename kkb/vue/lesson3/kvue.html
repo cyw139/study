@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kvue</title>
+</head>
+<body>
+<!--<script src="KVue.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--const app = new KVue({-->
+        <!--data: {-->
+            <!--test: '',-->
+            <!--foo: {bar: ''}-->
+        <!--}-->
+    <!--})-->
+    <!--app.$data.test = '新同志，你好呀！'-->
+    <!--app.$data.foo.bar = '导航你好！'-->
+    <!--app.test = '导航你好吗？'-->
+<!--</script>-->
+<div id="app">
+    <!-- 插值属性，依赖1 -->
+    <p>{{name}}</p>
+    <!-- 内置指令 -->
+    <p k-text="name"></p>
+    <!-- 插值属性，依赖2 -->
+    <p>{{age}}</p>
+    <!-- 插值属性，依赖3 -->
+    <p>
+        {{doubleAge}}
+    </p>
+    <!-- 实现双向绑定 -->
+    <input type="text" k-model="name">
+    <!-- 事件实现 -->
+    <button @click="changeName">呵呵</button>
+    <!-- html 如何做的 -->
+    <div k-html="html"></div>
+</div>
+<script src="./KVue.js"></script>
+<script src="./compile.js"></script>
+<script>
+    const kaikeba = new KVue({
+        el: '#app',
+        data: {
+            name: "I am test",
+            age: 12,
+            html: '<button>这是一个按钮</button>'
+        },
+        // created 钩子如何执行？
+        created() {
+            console.log('开始啦')
+            setTimeout(() => {
+                this.name = '我是测试'
+            }, 1500)
+        },
+        methods: {
+            // 方法如何调用？
+            // 回调函数，怎么被调用的？
+            changeName() {
+                this.name = '哈喽，开课吧'
+                this.age = 1
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "module:@babel/core",
+    "module:@babel/cli",
+    "module:@babel/preset-env",
+    "module:@babel/preset-react"
+  ],
+  "plugins": []
+}
