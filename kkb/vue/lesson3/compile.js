@@ -22,6 +22,8 @@ class Compile {
         // 因为文档片段存在于内存中，并不在DOM树中，
         // 所以将子元素插入到文档片段时不会引起页面回流（对元素位置和几何上的计算）。
         // 因此，使用文档片段通常会带来更好的性能。
+        // ====== MDN参考链接 =====
+        // https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createDocumentFragment
         const fragment = document.createDocumentFragment()
         let child
         while (child = el.firstChild) {
@@ -31,6 +33,8 @@ class Compile {
     }
     compile(el) {
         const childNodes = el.childNodes
+        // ===== 参考文档 =====
+        // http://es6.ruanyifeng.com/#docs/array#Array-from
         Array.from(childNodes).forEach(node => {
             // 判断节点类型
             if (node.nodeType === 1) { // element
