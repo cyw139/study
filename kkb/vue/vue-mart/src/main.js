@@ -7,10 +7,10 @@ import interceptor from './interceptor'
 
 Vue.config.productionTip = false
 
-new Vue({
+const app = new Vue({
   store,
   router,
   render: h => h(App)
 }).$mount('#app')
 
-interceptor()
+interceptor(app)

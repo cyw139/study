@@ -22,6 +22,10 @@ export default {
         }
         return false
       })
+    },
+    logout({commit}) {
+      localStorage.removeItem('token')
+      commit('setLoginState', false)
     }
   }
 }
