@@ -2,6 +2,18 @@
   <div class="home">
     <!--<img alt="Vue logo" src="../assets/logo.png">-->
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
+
+    <!-- 轮播图 -->
+    <!--<cube-slide :data="slider" :interval="5000">-->
+      <!--<cube-slide-item v-for="(item,index) in slider"-->
+                       <!--:key="index">-->
+        <!--<router-link :to="`/detail/${item.id}`">-->
+          <!--<img class="slider" :src="item.img">-->
+        <!--</router-link>-->
+      <!--</cube-slide-item>-->
+    <!--</cube-slide>-->
+    <!--&lt;!&ndash; 商品列列表 &ndash;&gt;-->
+    <!--<good-list :data="goods"></good-list>-->
   </div>
 </template>
 
