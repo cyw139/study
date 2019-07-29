@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="vuejs-lesson4（vue-mart） 1、koa服务器配置；2、前端和服务端鉴权">
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/public/img/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/public/img/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/public/img/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/public/img/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/public/img/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/server/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/src/App1.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/src/service/goods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="vuejs-lesson6（vue-SSR） nuxt框架项目">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-mart/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-mart/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-mart/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-mart/vue.config.js" afterDir="false" />
     </list>
     <ignored path="study.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,7 +75,7 @@
           <entry key="gitignore" value="70" />
           <entry key="html" value="211" />
           <entry key="js" value="5120" />
-          <entry key="txt" value="314" />
+          <entry key="txt" value="338" />
           <entry key="vue" value="8871" />
         </counts>
       </usages-collector>
@@ -98,7 +84,7 @@
           <entry key="HTML" value="211" />
           <entry key="JSON" value="192" />
           <entry key="JavaScript" value="5120" />
-          <entry key="PLAIN_TEXT" value="384" />
+          <entry key="PLAIN_TEXT" value="408" />
           <entry key="Vue.js" value="8871" />
         </counts>
       </usages-collector>
@@ -107,8 +93,8 @@
           <entry key="babelrc" value="2" />
           <entry key="gitignore" value="5" />
           <entry key="html" value="2" />
-          <entry key="js" value="37" />
-          <entry key="json" value="2" />
+          <entry key="js" value="38" />
+          <entry key="json" value="3" />
           <entry key="lock" value="1" />
           <entry key="vue" value="54" />
         </counts>
@@ -116,8 +102,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="37" />
+          <entry key="JSON" value="5" />
+          <entry key="JavaScript" value="38" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Vue.js" value="54" />
           <entry key="yarn.lock" value="1" />
@@ -132,15 +118,6 @@
     <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/kkb/vue/vue-mart/src/App1.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Cart.vue">
               <provider selected="true" editor-type-id="text-editor">
@@ -180,8 +157,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-544">
-                  <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+                <state relative-caret-position="232">
+                  <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -220,8 +197,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Home.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -314,6 +291,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/node_modules" />
     <handled-path value="$PROJECT_DIR$/kkb/vue/vue-mart/node_modules" />
     <handled-path value="$PROJECT_DIR$/kkb/vue/vue-study/node_modules" />
   </component>
@@ -862,7 +840,7 @@
       <workItem from="1557540757779" duration="81778000" />
       <workItem from="1558685232250" duration="14037000" />
       <workItem from="1563509944590" duration="24241000" />
-      <workItem from="1564354150729" duration="1370000" />
+      <workItem from="1564354150729" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="新增学习">
       <created>1480282676658</created>
@@ -1018,11 +996,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563594189292</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="vuejs-lesson6（vue-SSR） nuxt框架项目">
+      <created>1564397675110</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1564397675110</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171034000" />
+    <option name="totallyTimeSpent" value="172094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1037,9 +1022,9 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943925" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4993895" weight="0.32857144" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.47142857" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Application Servers" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -1054,6 +1039,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1088,11 +1083,10 @@
     <MESSAGE value="vuejs-lesson4（vue-mart） 1、安装router: vue add router" />
     <MESSAGE value="vuejs-lesson4（vue-mart） 1、拦截并设置token；2、mock" />
     <MESSAGE value="vuejs-lesson4（vue-mart） 1、koa服务器配置；2、前端和服务端鉴权" />
-    <option name="LAST_COMMIT_MESSAGE" value="vuejs-lesson4（vue-mart） 1、koa服务器配置；2、前端和服务端鉴权" />
+    <MESSAGE value="vuejs-lesson6（vue-SSR） nuxt框架项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="vuejs-lesson6（vue-SSR） nuxt框架项目" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kkb/vue/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/vue/sites/t1/ttt.vue" />
     <entry file="file://$PROJECT_DIR$/vue/test/ttt.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1407,17 +1401,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="120">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-mart/src/views/Home.vue">
+    <entry file="file://$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        <state relative-caret-position="165">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/Cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
         </state>
       </provider>
     </entry>
