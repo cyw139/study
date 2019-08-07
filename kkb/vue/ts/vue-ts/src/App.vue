@@ -3,6 +3,10 @@
     <!--<img alt="Vue logo" src="./assets/logo.png">-->
     <!--<HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <Hello msg="Welcome to Your Vue.js + TypeScript App"/>
+    <!-- vue 类型限制 -->
+    <!--<Hello :msg="123"/>-->
+    <!--  不传值会有警告 -->
+    <!--<Hello />-->
   </div>
 </template>
 
