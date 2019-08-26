@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="lesson-8 js-cookie &amp;&amp; cookie授权">
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/permission.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/user.js" afterDir="false" />
+    <list default="true" id="44ff964c-737c-4c79-a810-1716f4e88b02" name="Default" comment="react-lesson01：创建项目study_react">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kkb/vue/vue-study/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/kkb/vue/vue-study/src/utils/auth.js" afterDir="false" />
     </list>
     <ignored path="study.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,7 +79,7 @@
           <entry key="js" value="13031" />
           <entry key="json" value="21" />
           <entry key="ts" value="1630" />
-          <entry key="txt" value="541" />
+          <entry key="txt" value="630" />
           <entry key="vue" value="13415" />
         </counts>
       </usages-collector>
@@ -93,7 +88,7 @@
           <entry key="HTML" value="236" />
           <entry key="JSON" value="213" />
           <entry key="JavaScript" value="13031" />
-          <entry key="PLAIN_TEXT" value="611" />
+          <entry key="PLAIN_TEXT" value="700" />
           <entry key="TypeScript" value="1630" />
           <entry key="Vue.js" value="13415" />
         </counts>
@@ -101,11 +96,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="babelrc" value="2" />
-          <entry key="gitignore" value="5" />
+          <entry key="gitignore" value="6" />
           <entry key="html" value="6" />
           <entry key="js" value="83" />
-          <entry key="json" value="5" />
+          <entry key="json" value="7" />
           <entry key="lock" value="1" />
+          <entry key="md" value="1" />
           <entry key="png" value="1" />
           <entry key="svg" value="1" />
           <entry key="ts" value="2" />
@@ -116,9 +112,10 @@
         <counts>
           <entry key="HTML" value="6" />
           <entry key="Image" value="1" />
-          <entry key="JSON" value="7" />
+          <entry key="JSON" value="9" />
           <entry key="JavaScript" value="83" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="2" />
           <entry key="Vue.js" value="88" />
@@ -137,54 +134,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/permission.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#24#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/utils/auth.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/permission.js">
+        <entry file="file://$PROJECT_DIR$/kkb/react/lesson01/study_react/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="14" column="4" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -286,6 +240,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/kkb/react/lesson01/study_react/node_modules" />
+    <handled-path value="$PROJECT_DIR$/kkb/react/lesson01/test_eject/node_modules" />
     <handled-path value="$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/node_modules" />
     <handled-path value="$PROJECT_DIR$/kkb/vue/ts/vue-ts/node_modules" />
     <handled-path value="$PROJECT_DIR$/kkb/vue/vue-mart/node_modules" />
@@ -685,6 +641,8 @@
       <path value="$PROJECT_DIR$/es6/node_modules/util-deprecate/package.json" />
       <path value="$PROJECT_DIR$/es6/node_modules/v8flags/package.json" />
       <path value="$PROJECT_DIR$/es6/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/kkb/react/lesson01/study_react/package.json" />
+      <path value="$PROJECT_DIR$/kkb/react/lesson01/test_eject/package.json" />
       <path value="$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/package.json" />
       <path value="$PROJECT_DIR$/kkb/vue/ts/vue-ts/package.json" />
       <path value="$PROJECT_DIR$/kkb/vue/vue-mart/package.json" />
@@ -741,41 +699,22 @@
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="kkb" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson01" type="462c0819:PsiDirectoryNode" />
+              <item name="test_eject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -861,7 +800,7 @@
       <workItem from="1563509944590" duration="24241000" />
       <workItem from="1564354150729" duration="26521000" />
       <workItem from="1564922593661" duration="6934000" />
-      <workItem from="1565064404521" duration="35224000" />
+      <workItem from="1565064404521" duration="36494000" />
     </task>
     <task id="LOCAL-00001" summary="新增学习">
       <created>1480282676658</created>
@@ -1094,17 +1033,30 @@
       <option name="project" value="LOCAL" />
       <updated>1566647965630</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="vue-lesson-8 权限">
+      <created>1566807593293</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1566807593293</updated>
+    </task>
+    <task id="LOCAL-00035" summary="react-lesson01：创建项目study_react">
+      <created>1566808089725</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1566808089725</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238343000" />
+    <option name="totallyTimeSpent" value="239613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="853" y="23" width="826" height="513" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31760204" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31760204" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1182,8 +1134,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="datagrid-6" />
-    <MESSAGE value="datagrid-7/8/9" />
     <MESSAGE value="修改细节" />
     <MESSAGE value="1、vue的nmp安装；2、sites/index.html学习笔记" />
     <MESSAGE value="学习笔记：2019-01-22" />
@@ -1207,30 +1157,11 @@
     <MESSAGE value="lesson-8 路由、图标、webpack" />
     <MESSAGE value="lesson-8 install element-ui [ &gt; vue add element ]" />
     <MESSAGE value="lesson-8 js-cookie &amp;&amp; cookie授权" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson-8 js-cookie &amp;&amp; cookie授权" />
+    <MESSAGE value="vue-lesson-8 权限" />
+    <MESSAGE value="react-lesson01：创建项目study_react" />
+    <option name="LAST_COMMIT_MESSAGE" value="react-lesson01：创建项目study_react" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/views/List.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="32" column="10" selection-start-line="25" selection-start-column="8" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/pages/main/cart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/pages/main.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/pages/main/detail/index.vue" />
     <entry file="file://$PROJECT_DIR$/kkb/vue/nuxt/nuxt_app/layouts/users.js" />
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/components/KFormItem.vue">
@@ -1519,14 +1450,21 @@
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/permission.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1536,14 +1474,14 @@
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/utils/auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="10" selection-end-column="1" />
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/permission.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
-          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#24#53#0" expanded="true" />
@@ -1551,10 +1489,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kkb/vue/vue-study/src/store/modules/permission.js">
+    <entry file="file://$PROJECT_DIR$/kkb/react/lesson01/study_react/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/react/lesson01/study_react/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kkb/react/lesson01/study_react/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
