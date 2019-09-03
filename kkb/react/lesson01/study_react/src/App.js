@@ -1,11 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+// import logo from './logo.svg';
 import './App.css';
+import CompType from './CompType';
+import StateTest from './StateTest';
+import JsxTest from './JsxTest';
+import CartSample from './CartSample'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* 自定义组件，开头大写 */}
+      {/* <JsxTest /> */}
+      {/* 组件类型 */}
+      {/* <CompType /> */}
+      {/* 状态 */}
+      {/* <StateTest /> */}
+      {/* 购物车 */}
+      <CartSample />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,7 +31,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
